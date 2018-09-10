@@ -1,0 +1,27 @@
+{
+  "name": "blinkky-lite-tutorial-device-message-adapter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "node_modules/node-red/red.js -s ./settings.js -u ./",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "node-red"
+  ],
+  "author": "David McGinnis",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "dependencies": {
+    "node-red": "^0.18.7",
+    "node-red-dashboard": "^2.9.6",
+    "node-red-node-arduino": "0.0.18"
+  }
+}
