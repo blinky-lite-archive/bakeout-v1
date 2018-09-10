@@ -1,0 +1,3590 @@
+[
+    {
+        "id": "465cfd27.107674",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "2450c4c2.c3b524",
+        "type": "tab",
+        "label": "Dipole",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "482fca47.901ea4",
+        "type": "tab",
+        "label": "Quadrupole",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "6ad7c930.1a06b8",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#000000",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            }
+        },
+        "site": {
+            "name": "Oscillation Overthruster",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 3,
+                "gy": 3,
+                "cx": 3,
+                "cy": 3,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "4149401f.1d031",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Setup",
+        "icon": "dashboard",
+        "order": 7
+    },
+    {
+        "id": "e0826cbb.1a4b",
+        "type": "ui_group",
+        "z": "",
+        "name": "Channel 1",
+        "tab": "4149401f.1d031",
+        "order": 1,
+        "disp": true,
+        "width": "5",
+        "collapse": false
+    },
+    {
+        "id": "3ec60a9a.edfc26",
+        "type": "ui_group",
+        "z": "",
+        "name": "Channel 2",
+        "tab": "4149401f.1d031",
+        "order": 2,
+        "disp": true,
+        "width": "5",
+        "collapse": false
+    },
+    {
+        "id": "fdad7acc.14b0c8",
+        "type": "ui_group",
+        "z": "",
+        "name": "Channel 3",
+        "tab": "4149401f.1d031",
+        "order": 3,
+        "disp": true,
+        "width": "5",
+        "collapse": false
+    },
+    {
+        "id": "f2ccb85.2f64a48",
+        "type": "ui_group",
+        "z": "",
+        "name": "Trigger",
+        "tab": "4149401f.1d031",
+        "order": 5,
+        "disp": true,
+        "width": "5",
+        "collapse": false
+    },
+    {
+        "id": "5360132d.12ff6c",
+        "type": "ui_group",
+        "z": "",
+        "name": "Time Base",
+        "tab": "4149401f.1d031",
+        "order": 6,
+        "disp": true,
+        "width": "5",
+        "collapse": false
+    },
+    {
+        "id": "410cfdb5.b39264",
+        "type": "ui_group",
+        "z": "",
+        "name": "Send Data",
+        "tab": "4149401f.1d031",
+        "order": 7,
+        "disp": true,
+        "width": "5",
+        "collapse": false
+    },
+    {
+        "id": "10775904.8072d7",
+        "type": "ui_group",
+        "z": "",
+        "name": "Phase",
+        "tab": "423464b4.7a198c",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": true
+    },
+    {
+        "id": "51491548.9210fc",
+        "type": "ui_group",
+        "z": "",
+        "name": "Scope Traces",
+        "tab": "423464b4.7a198c",
+        "order": 6,
+        "disp": true,
+        "width": "6",
+        "collapse": true
+    },
+    {
+        "id": "867dd96a.fb4728",
+        "type": "ui_group",
+        "z": "",
+        "name": "Phase Modes",
+        "tab": "423464b4.7a198c",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": true
+    },
+    {
+        "id": "81b3993a.0cc418",
+        "type": "ui_group",
+        "z": "",
+        "name": "Channel 4",
+        "tab": "4149401f.1d031",
+        "order": 4,
+        "disp": true,
+        "width": "5",
+        "collapse": false
+    },
+    {
+        "id": "62dd7ac8.98fca4",
+        "type": "ui_group",
+        "z": "",
+        "name": "Bunch Length",
+        "tab": "423464b4.7a198c",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": true
+    },
+    {
+        "id": "2892090b.ae6526",
+        "type": "ui_group",
+        "z": "",
+        "name": "Length Modes",
+        "tab": "423464b4.7a198c",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": true
+    },
+    {
+        "id": "423464b4.7a198c",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Plots",
+        "icon": "dashboard",
+        "order": 1
+    },
+    {
+        "id": "e91ce1c7.f52e",
+        "type": "ui_group",
+        "z": "",
+        "name": "Intensity",
+        "tab": "423464b4.7a198c",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": true
+    },
+    {
+        "id": "e1719692.a724c8",
+        "type": "serial-port",
+        "z": "",
+        "serialport": "/dev/ttyACM0",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": true
+    },
+    {
+        "id": "a0b953d3.6ba41",
+        "type": "ui_group",
+        "z": "",
+        "name": "Dipole",
+        "tab": "35fc9c4e.c46d34",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "35fc9c4e.c46d34",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Mode 0",
+        "icon": "dashboard"
+    },
+    {
+        "id": "7a4df6d1.1d139",
+        "type": "ui_group",
+        "z": "",
+        "name": "Quadrupole",
+        "tab": "35fc9c4e.c46d34",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "2a5827d4.fa9f08",
+        "type": "tcp out",
+        "z": "465cfd27.107674",
+        "host": "",
+        "port": "5025",
+        "beserver": "reply",
+        "base64": false,
+        "end": false,
+        "name": "Send To Scope",
+        "x": 540,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "3d530011.37a7a",
+        "type": "tcp in",
+        "z": "465cfd27.107674",
+        "name": "Scope",
+        "server": "client",
+        "host": "192.168.10.10",
+        "port": "5025",
+        "datamode": "stream",
+        "datatype": "utf8",
+        "newline": "\\n",
+        "topic": "info",
+        "base64": false,
+        "x": 110,
+        "y": 160,
+        "wires": [
+            [
+                "14d88e1.4251472"
+            ]
+        ]
+    },
+    {
+        "id": "6b1da3b9.6748ec",
+        "type": "debug",
+        "z": "465cfd27.107674",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 710,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "193ad971.054a97",
+        "type": "function",
+        "z": "465cfd27.107674",
+        "name": "GetData",
+        "func": "if (flow.get('sendingDataSettings')) return null;\nif (flow.get('waitingForData')) return null;\nmsg.payload = 'SING;*OPC?\\n';\nflow.set('waitingForData',true);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 340,
+        "y": 240,
+        "wires": [
+            [
+                "2a5827d4.fa9f08"
+            ]
+        ]
+    },
+    {
+        "id": "fbbd63.a1ad42a",
+        "type": "inject",
+        "z": "465cfd27.107674",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "0.5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "5",
+        "x": 150,
+        "y": 240,
+        "wires": [
+            [
+                "193ad971.054a97"
+            ]
+        ]
+    },
+    {
+        "id": "ab9f6959.00f5e8",
+        "type": "function",
+        "z": "465cfd27.107674",
+        "name": "InitSetupData",
+        "func": "var setupData =\n{\n    'chan1Scal':'1.0',\n    'chan2Scal':'1.0',\n    'chan3Scal':'1.0',\n    'chan4Scal':'1.0',\n    'chan1Pos':'0',\n    'chan2Pos':'0',\n    'chan3Pos':'0',\n    'chan4Pos':'0',\n    'chan1Pol':'NORM',\n    'chan2Pol':'NORM',\n    'chan3Pol':'NORM',\n    'chan4Pol':'NORM',\n    'trigSource':'CH4',\n    'trigLevel':'0.5',\n    'trigSlope':'NEG',\n    'trigMode':'NORM',\n    'timeScale':'200',\n    'timeRef':'10',\n    'rfFreq':'99.930'\n};\nflow.set('setupData',setupData);\nflow.set('waitingForData',false);\nmsg.payload = setupData;\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 320,
+        "y": 460,
+        "wires": [
+            [
+                "56048c49.8a1184"
+            ]
+        ]
+    },
+    {
+        "id": "55a464d9.88725c",
+        "type": "inject",
+        "z": "465cfd27.107674",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 150,
+        "y": 460,
+        "wires": [
+            [
+                "ab9f6959.00f5e8"
+            ]
+        ]
+    },
+    {
+        "id": "56048c49.8a1184",
+        "type": "file",
+        "z": "465cfd27.107674",
+        "name": "Write Setup Data",
+        "filename": "setupData.json",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "x": 530,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "76e89c04.aae704",
+        "type": "file in",
+        "z": "465cfd27.107674",
+        "name": "ReadSetupData",
+        "filename": "setupData.json",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "x": 320,
+        "y": 340,
+        "wires": [
+            [
+                "376b6b35.adcff4"
+            ]
+        ]
+    },
+    {
+        "id": "d7f37f00.115d7",
+        "type": "inject",
+        "z": "465cfd27.107674",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "x": 150,
+        "y": 340,
+        "wires": [
+            [
+                "76e89c04.aae704"
+            ]
+        ]
+    },
+    {
+        "id": "376b6b35.adcff4",
+        "type": "json",
+        "z": "465cfd27.107674",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 480,
+        "y": 340,
+        "wires": [
+            [
+                "95a8fc96.499d3"
+            ]
+        ]
+    },
+    {
+        "id": "95a8fc96.499d3",
+        "type": "function",
+        "z": "465cfd27.107674",
+        "name": "storeSetupData",
+        "func": "flow.set('setupData',msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 640,
+        "y": 340,
+        "wires": [
+            [
+                "9ad1ffb9.8bb3",
+                "796048d.77a6cb8",
+                "9e194da9.7e54f",
+                "fe724625.ed1e28",
+                "a3f7119b.f2b68",
+                "f12e98b2.8f64e8",
+                "3a682acb.210256",
+                "7aeba95e.1d81c8",
+                "f098bd95.9873f",
+                "a29448d6.3583d8",
+                "8b19b6aa.017bd8",
+                "586aebeb.9a8a24",
+                "207e4e02.b98b62",
+                "7bb455bf.dde4fc",
+                "841328b1.e2e9c8",
+                "65f4b7a7.9aaf78",
+                "68cec066.6f5",
+                "2d556bf3.c3d174",
+                "4438a99a.29a6f8"
+            ]
+        ]
+    },
+    {
+        "id": "9ad1ffb9.8bb3",
+        "type": "function",
+        "z": "465cfd27.107674",
+        "name": "Setup",
+        "func": "var setupData = flow.get('setupData');\nmsg.payload = '*RST\\n';\nmsg.payload = msg.payload + 'CHAN1:STAT ON\\n';\nmsg.payload = msg.payload + 'CHAN1:POS ' + setupData.chan1Pos + ';\\n';\nmsg.payload = msg.payload + 'CHAN1:COUP DC;\\n';\nmsg.payload = msg.payload + 'CHAN1:SCAL ' + setupData.chan1Scal + ';\\n';\nmsg.payload = msg.payload + 'CHAN1:POL ' + setupData.chan1Pol + ';\\n';\nmsg.payload = msg.payload + 'CHAN2:STAT ON;\\n';\nmsg.payload = msg.payload + 'CHAN2:POS ' + setupData.chan2Pos + ';\\n';\nmsg.payload = msg.payload + 'CHAN2:COUP DC;\\n';\nmsg.payload = msg.payload + 'CHAN2:SCAL ' + setupData.chan2Scal + ';\\n';\nmsg.payload = msg.payload + 'CHAN3:STAT ON;\\n';\nmsg.payload = msg.payload + 'CHAN3:POS ' + setupData.chan3Pos + ';\\n';\nmsg.payload = msg.payload + 'CHAN3:COUP DCLimit;\\n';\nmsg.payload = msg.payload + 'CHAN3:SCAL ' + setupData.chan3Scal + ';\\n';\nmsg.payload = msg.payload + 'CHAN3:POL ' + setupData.chan3Pol + ';\\n';\nmsg.payload = msg.payload + 'CHAN4:STAT ON;\\n';\nmsg.payload = msg.payload + 'CHAN4:POS ' + setupData.chan4Pos + ';\\n';\nmsg.payload = msg.payload + 'CHAN4:COUP DC;\\n';\nmsg.payload = msg.payload + 'CHAN4:SCAL ' + setupData.chan4Scal + ';\\n';\nmsg.payload = msg.payload + 'CHAN4:POL ' + setupData.chan4Pol + ';\\n';\nmsg.payload = msg.payload + 'TRIG:A:SOUR ' + setupData.trigSource + '\\n';\nmsg.payload = msg.payload + 'TRIG:A:EDGE:SLOP ' + setupData.trigSlope + '\\n';\nmsg.payload = msg.payload + 'TRIG:A:MODE NORM\\n';\nmsg.payload = msg.payload + 'TRIG:A:LEV4 ' + setupData.trigLevel + '\\n';\nmsg.payload = msg.payload + 'TIM:SCAL ' + setupData.timeScale + 'e-9\\n';\nmsg.payload = msg.payload + 'TIM:REF ' + setupData.timeRef + '\\n';\nmsg.payload = msg.payload + 'ACQ:WRAT MSAM\\n';\n//msg.payload = msg.payload + 'FORM UINT,8\\n';\nmsg.payload = msg.payload + 'FORM ASC\\n';\nmsg.payload = msg.payload + 'CHAN:DATA:POIN DMAX\\n';\nflow.set('sendingDataSettings', true);\nflow.set('waitingForData',false);\nvar modeHistory = [];\nvar modeBHistory = [];\nfor (var itrace = 0; itrace < 5; ++ itrace)\n{   \n    var mode = [];\n    var modeB = [];\n    for (var imode = 0; imode < 88; ++imode)\n    {\n        mode[imode] = 0.0;\n        modeB[imode] = 0.0;\n        \n    }\n    modeBHistory[itrace] = modeB;\n}\nflow.set('modeHistory',modeHistory);\nflow.set('modeBHistory',modeBHistory);\nvar scopeLimits = \n{\n   'npts': -1,\n   'xstart': -10000.0, \n   'xstop': -10000.0, \n}\nflow.set('scopeLimits', scopeLimits);\nmodeTimeModes = \n{\n    'trace1':'0',\n    'trace2':'0',\n    'trace3':'0',\n    'trace4':'0',\n    'trace5':'0',\n}\nflow.set('modeTimeModes', modeTimeModes);\nmodeBTimeModes = \n{\n    'trace1':'0',\n    'trace2':'0',\n    'trace3':'0',\n    'trace4':'0',\n    'trace5':'0',\n}\nflow.set('modeBTimeModes', modeBTimeModes);\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 870,
+        "y": 340,
+        "wires": [
+            [
+                "5c33919a.1d596",
+                "5c83e776.156938"
+            ]
+        ]
+    },
+    {
+        "id": "5c33919a.1d596",
+        "type": "tcp out",
+        "z": "465cfd27.107674",
+        "host": "",
+        "port": "5025",
+        "beserver": "reply",
+        "base64": false,
+        "end": false,
+        "name": "Send To Scope",
+        "x": 1400,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "796048d.77a6cb8",
+        "type": "function",
+        "z": "465cfd27.107674",
+        "name": "Chan1 Scale",
+        "func": "return {'topic':'chan1Scal','payload':msg.payload.chan1Scal};\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 830,
+        "y": 400,
+        "wires": [
+            [
+                "e21055b0.cd8278"
+            ]
+        ]
+    },
+    {
+        "id": "9e194da9.7e54f",
+        "type": "function",
+        "z": "465cfd27.107674",
+        "name": "Chan2 Scale",
+        "func": "return {'topic':'chan2Scal','payload':msg.payload.chan2Scal};\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 830,
+        "y": 440,
+        "wires": [
+            [
+                "6ef042e4.08459c"
+            ]
+        ]
+    },
+    {
+        "id": "fe724625.ed1e28",
+        "type": "function",
+        "z": "465cfd27.107674",
+        "name": "Chan1 Pos",
+        "func": "return {'topic':'chan1Pos','payload':msg.payload.chan1Pos};\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 830,
+        "y": 560,
+        "wires": [
+            [
+                "329da3f1.d9d2ec"
+            ]
+        ]
+    },
+    {
+        "id": "a3f7119b.f2b68",
+        "type": "function",
+        "z": "465cfd27.107674",
+        "name": "Chan2 Pos",
+        "func": "return {'topic':'chan2Pos','payload':msg.payload.chan2Pos};\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 830,
+        "y": 600,
+        "wires": [
+            [
+                "c3e45b1f.759098"
+            ]
+        ]
+    },
+    {
+        "id": "f12e98b2.8f64e8",
+        "type": "function",
+        "z": "465cfd27.107674",
+        "name": "Chan3 Pos",
+        "func": "return {'topic':'chan3Pos','payload':msg.payload.chan3Pos};\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 830,
+        "y": 640,
+        "wires": [
+            [
+                "836e290e.60af38"
+            ]
+        ]
+    },
+    {
+        "id": "3a682acb.210256",
+        "type": "function",
+        "z": "465cfd27.107674",
+        "name": "Chan1 Pol",
+        "func": "return {'topic':'chan1Pol','payload':msg.payload.chan1Pol};\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 830,
+        "y": 720,
+        "wires": [
+            [
+                "be94c7b7.ceb9a8"
+            ]
+        ]
+    },
+    {
+        "id": "7aeba95e.1d81c8",
+        "type": "function",
+        "z": "465cfd27.107674",
+        "name": "Chan2 Pol",
+        "func": "return {'topic':'chan2Pol','payload':msg.payload.chan2Pol};\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 830,
+        "y": 760,
+        "wires": [
+            [
+                "c256f26.7026c1"
+            ]
+        ]
+    },
+    {
+        "id": "f098bd95.9873f",
+        "type": "function",
+        "z": "465cfd27.107674",
+        "name": "Chan3 Pol",
+        "func": "return {'topic':'chan3Pol','payload':msg.payload.chan3Pol};\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 830,
+        "y": 800,
+        "wires": [
+            [
+                "3ee57469.668edc"
+            ]
+        ]
+    },
+    {
+        "id": "a29448d6.3583d8",
+        "type": "function",
+        "z": "465cfd27.107674",
+        "name": "Trigger Level",
+        "func": "return {'topic':'trigLevel','payload':msg.payload.trigLevel};\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 830,
+        "y": 880,
+        "wires": [
+            [
+                "8c25b24a.b9c6c"
+            ]
+        ]
+    },
+    {
+        "id": "8b19b6aa.017bd8",
+        "type": "function",
+        "z": "465cfd27.107674",
+        "name": "Trigger Mode",
+        "func": "return {'topic':'trigMode','payload':msg.payload.trigMode};\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 830,
+        "y": 920,
+        "wires": [
+            [
+                "60586fb2.9b902"
+            ]
+        ]
+    },
+    {
+        "id": "e21055b0.cd8278",
+        "type": "ui_text_input",
+        "z": "465cfd27.107674",
+        "name": "Channel 1 Scale",
+        "label": "Scale",
+        "group": "e0826cbb.1a4b",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "chan1Scal",
+        "x": 1060,
+        "y": 400,
+        "wires": [
+            [
+                "a120de86.021da"
+            ]
+        ]
+    },
+    {
+        "id": "6ef042e4.08459c",
+        "type": "ui_text_input",
+        "z": "465cfd27.107674",
+        "name": "Channel 2 Scale",
+        "label": "Scale",
+        "group": "3ec60a9a.edfc26",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "chan2Scal",
+        "x": 1060,
+        "y": 440,
+        "wires": [
+            [
+                "a120de86.021da"
+            ]
+        ]
+    },
+    {
+        "id": "9e00c83a.877388",
+        "type": "ui_text_input",
+        "z": "465cfd27.107674",
+        "name": "Channel 3 Scale",
+        "label": "Scale",
+        "group": "fdad7acc.14b0c8",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "chan3Scal",
+        "x": 1060,
+        "y": 480,
+        "wires": [
+            [
+                "a120de86.021da"
+            ]
+        ]
+    },
+    {
+        "id": "329da3f1.d9d2ec",
+        "type": "ui_text_input",
+        "z": "465cfd27.107674",
+        "name": "Channel 1 Position",
+        "label": "Position",
+        "group": "e0826cbb.1a4b",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "chan1Pos",
+        "x": 1050,
+        "y": 560,
+        "wires": [
+            [
+                "a120de86.021da"
+            ]
+        ]
+    },
+    {
+        "id": "c3e45b1f.759098",
+        "type": "ui_text_input",
+        "z": "465cfd27.107674",
+        "name": "Channel 2 Position",
+        "label": "Position",
+        "group": "3ec60a9a.edfc26",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "chan2Pos",
+        "x": 1050,
+        "y": 600,
+        "wires": [
+            [
+                "a120de86.021da"
+            ]
+        ]
+    },
+    {
+        "id": "836e290e.60af38",
+        "type": "ui_text_input",
+        "z": "465cfd27.107674",
+        "name": "Channel 3 Position",
+        "label": "Position",
+        "group": "fdad7acc.14b0c8",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "chan3Pos",
+        "x": 1050,
+        "y": 640,
+        "wires": [
+            [
+                "a120de86.021da"
+            ]
+        ]
+    },
+    {
+        "id": "be94c7b7.ceb9a8",
+        "type": "ui_text_input",
+        "z": "465cfd27.107674",
+        "name": "Channel 1 Polarity",
+        "label": "Polarity",
+        "group": "e0826cbb.1a4b",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "chan1Pol",
+        "x": 1050,
+        "y": 720,
+        "wires": [
+            [
+                "a120de86.021da"
+            ]
+        ]
+    },
+    {
+        "id": "c256f26.7026c1",
+        "type": "ui_text_input",
+        "z": "465cfd27.107674",
+        "name": "Channel 2 Polarity",
+        "label": "Polarity",
+        "group": "3ec60a9a.edfc26",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "chan2Pol",
+        "x": 1050,
+        "y": 760,
+        "wires": [
+            [
+                "a120de86.021da"
+            ]
+        ]
+    },
+    {
+        "id": "3ee57469.668edc",
+        "type": "ui_text_input",
+        "z": "465cfd27.107674",
+        "name": "Channel 3 Polarity",
+        "label": "Polarity",
+        "group": "fdad7acc.14b0c8",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "chan3Pol",
+        "x": 1050,
+        "y": 800,
+        "wires": [
+            [
+                "a120de86.021da"
+            ]
+        ]
+    },
+    {
+        "id": "8c25b24a.b9c6c",
+        "type": "ui_text_input",
+        "z": "465cfd27.107674",
+        "name": "Trigger Level",
+        "label": "Level",
+        "group": "f2ccb85.2f64a48",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "trigLevel",
+        "x": 1070,
+        "y": 880,
+        "wires": [
+            [
+                "a120de86.021da"
+            ]
+        ]
+    },
+    {
+        "id": "60586fb2.9b902",
+        "type": "ui_text_input",
+        "z": "465cfd27.107674",
+        "name": "Trigger Mode",
+        "label": "Mode",
+        "group": "f2ccb85.2f64a48",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "trigMode",
+        "x": 1070,
+        "y": 920,
+        "wires": [
+            [
+                "a120de86.021da"
+            ]
+        ]
+    },
+    {
+        "id": "df7e2505.46ff18",
+        "type": "ui_text_input",
+        "z": "465cfd27.107674",
+        "name": "TimeBase Scale",
+        "label": "Scale/div (nS)",
+        "group": "5360132d.12ff6c",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "timeScale",
+        "x": 1060,
+        "y": 1000,
+        "wires": [
+            [
+                "a120de86.021da"
+            ]
+        ]
+    },
+    {
+        "id": "586aebeb.9a8a24",
+        "type": "function",
+        "z": "465cfd27.107674",
+        "name": "Time Scale",
+        "func": "return {'topic':'timeScale','payload':msg.payload.timeScale};\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 830,
+        "y": 1000,
+        "wires": [
+            [
+                "df7e2505.46ff18"
+            ]
+        ]
+    },
+    {
+        "id": "c78e4fae.0ae57",
+        "type": "ui_text_input",
+        "z": "465cfd27.107674",
+        "name": "TimeBase Reference",
+        "label": "Time Reference (%)",
+        "group": "5360132d.12ff6c",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "timeRef",
+        "x": 1040,
+        "y": 1040,
+        "wires": [
+            [
+                "a120de86.021da"
+            ]
+        ]
+    },
+    {
+        "id": "207e4e02.b98b62",
+        "type": "function",
+        "z": "465cfd27.107674",
+        "name": "Time Reference",
+        "func": "return {'topic':'timeRef','payload':msg.payload.timeRef};\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 840,
+        "y": 1040,
+        "wires": [
+            [
+                "c78e4fae.0ae57"
+            ]
+        ]
+    },
+    {
+        "id": "a120de86.021da",
+        "type": "function",
+        "z": "465cfd27.107674",
+        "name": "Get Setup changes",
+        "func": "var setupData = flow.get('setupData');\nsetupData[msg.topic] = msg.payload;\nflow.set('setupData',setupData)\nif (msg.topic == 'rfFreq') flow.set('rfFreq', Number(msg.payload));\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1330,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2da34ec6.2e8282",
+        "type": "ui_button",
+        "z": "465cfd27.107674",
+        "name": "Send Data to Scope",
+        "group": "410cfdb5.b39264",
+        "order": 0,
+        "width": "5",
+        "height": "1",
+        "passthru": false,
+        "label": "Send Data To Scope",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 160,
+        "y": 400,
+        "wires": [
+            [
+                "44351a33.4eb254"
+            ]
+        ]
+    },
+    {
+        "id": "44351a33.4eb254",
+        "type": "function",
+        "z": "465cfd27.107674",
+        "name": "Retrieve Setup Data",
+        "func": "msg.payload = flow.get('setupData');\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 400,
+        "y": 400,
+        "wires": [
+            [
+                "56048c49.8a1184",
+                "9ad1ffb9.8bb3"
+            ]
+        ]
+    },
+    {
+        "id": "5c83e776.156938",
+        "type": "delay",
+        "z": "465cfd27.107674",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "20",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 960,
+        "y": 260,
+        "wires": [
+            [
+                "7c763cc3.80c7d4"
+            ]
+        ]
+    },
+    {
+        "id": "60c7cd1b.10cfb4",
+        "type": "function",
+        "z": "465cfd27.107674",
+        "name": "Read Yscale",
+        "func": "if (!flow.get('sendingDataSettings')) return null;\ninfo = msg.payload;\nvar scopeLimits = flow.get('scopeLimits')\nif (scopeLimits.npts < 0) \n{\n    var info1 = info.split(',');\n    scopeLimits.xstart = Number(info1[0]);\n    scopeLimits.xstop = Number(info1[1]);\n    scopeLimits.npts = Number(info1[2]);\n    flow.set('sendingDataSettings', false)\n    flow.set('scopeLimits', scopeLimits);\n}\nvar newMsg = \n{\n    'topic':'yscale',\n    'payload': scopeLimits\n}\nreturn newMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1210,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7bb455bf.dde4fc",
+        "type": "function",
+        "z": "465cfd27.107674",
+        "name": "Chan3 Scale",
+        "func": "return {'topic':'chan3Scal','payload':msg.payload.chan3Scal};\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 830,
+        "y": 480,
+        "wires": [
+            [
+                "9e00c83a.877388"
+            ]
+        ]
+    },
+    {
+        "id": "930c042e.89ef48",
+        "type": "function",
+        "z": "465cfd27.107674",
+        "name": "Get Trace Data",
+        "func": "if (!flow.get('waitingForData')) return [null,null,null,null];\nif (msg.payload.length == 1)\n{\n    var msg1 = {'topic':'getChan1','payload':'CHAN1:DATA?\\n'};\n    var msg2 = {'topic':'getChan2','payload':'CHAN2:DATA?\\n'};\n    var msg3 = {'topic':'getChan3','payload':'CHAN3:DATA?\\n'};\n    context.set('itrace',1);\n    return [msg1,msg2,msg3,null];\n}\nelse\n{\n    if (context.get('itrace') == 1)\n    {\n        context.set('trace1',msg.payload);\n        context.set('itrace',2);\n        return [null, null,null,null];\n    }\n    if (context.get('itrace') == 2)\n    {\n        context.set('trace2',msg.payload);\n        context.set('itrace',3);\n        return [null, null,null,null];\n    }\n    if (context.get('itrace') == 3)\n    {\n        context.set('itrace',1);\n        context.set('trace3',msg.payload);\n        var scopeLimits = flow.get('scopeLimits');\n        var nptsRev = Math.round(scopeLimits.npts * 176.0e-6 / flow.get('rfFreq') / (scopeLimits.xstop - scopeLimits.xstart));\n        var istart0 = Math.round ((scopeLimits.npts - nptsRev) / 2);\n        var trace1String = context.get('trace1').split(',');\n        var trace2String = context.get('trace2').split(',');\n        var trace3String = context.get('trace3').split(',');\n        var rfFreq = flow.get('setupData').rfFreq;\n        var magn = [];\n        var phase = [];\n        var bunchLength = [];\n        var difPhase = [];\n        var difBunchLength = [];\n        var modeM = [];\n        var modeB = [];\n        var peakIntensity = [];\n        var trace1 = [];\n        var trace2 = [];\n        var trace3 = [];\n        var nptPerBunch = nptsRev / 176.0;\n        var twoPi = 2.0 *3.1415927;\n        \n        for (var ii = 0; ii < 176; ++ii) \n        {\n            var istart = Math.round(ii * nptPerBunch) + istart0;\n            var istop  = istart + Math.round(nptPerBunch);\n            trace1[ii] = 0.0;\n            trace2[ii] = 0.0;\n            trace3[ii] = 0.0;\n            for (var ipt = istart; ipt <= istop; ++ipt) \n            {\n                trace1[ii] = trace1[ii] + Number(trace1String[ipt]);\n                trace2[ii] = trace2[ii] + Number(trace2String[ipt]);\n                trace3[ii] = trace3[ii] + Number(trace3String[ipt]);\n            }\n            trace1[ii] = trace1[ii] / nptPerBunch;\n            trace2[ii] = trace2[ii] / nptPerBunch;\n            trace3[ii] = trace3[ii] / nptPerBunch;\n            magn[ii] = Math.sqrt(trace1[ii] * trace1[ii] + trace2[ii] * trace2[ii]);\n            phase[ii] = 0.0;\n            if (magn[ii] > 0.0002)\n            {\n// added factor of two for 6 dB splitter\n                phase[ii] = (1000000.0 / rfFreq) * Math.asin(2.0 * trace2[ii] / magn[ii]) / (2 * 3.1415927);\n            }\n// 186 mA when trace reades 0.098\n            magn[ii] = (186.0 / 0.098) * magn[ii] / 176.0;\n// diode fit with 1.86 fudge factor at 176.0ps bunch length\n            peakIntensity[ii] = 1.86 * (1.02 * trace3[ii] + 0.23) / (176.0 * rfFreq * 1.0e-06);\n            bunchLength[ii] = magn[ii] / (rfFreq * 1.0e-06) / peakIntensity[ii];\n        }\n        var lastTrace = context.get('lastTrace');\n\n        if (lastTrace == null)\n        {\n            var phaseHistory = [[],[],[]];\n            var bunchLengthHistory = [[],[],[]];\n            phaseHistory[0] = phase;\n            bunchLengthHistory[0] = bunchLength;\n            for (var itrace = 1; itrace < 3; ++itrace)\n            {\n                for (var ii = 0; ii < 176; ++ii)\n                {\n                    phaseHistory[itrace][ii] = 0.0;\n                    bunchLengthHistory[itrace][ii] = 0.0;\n                }\n            }\n            context.set('phaseHistory',phaseHistory);\n            context.set('bunchLengthHistory',bunchLengthHistory);\n            context.set('lastTrace',0);\n        }\n        else\n        {\n            var phaseHistory = context.get('phaseHistory');\n            var bunchLengthHistory = context.get('bunchLengthHistory');\n            var nextTrace = lastTrace + 1;\n            if (nextTrace > 2) nextTrace = 0;\n            phaseHistory[nextTrace] = phase;\n            bunchLengthHistory[nextTrace] = bunchLength;\n            context.set('phaseHistory',phaseHistory);\n            context.set('bunchLengthHistory',bunchLengthHistory);\n            context.set ('lastTrace',nextTrace);\n            for (var ii = 0; ii < 176; ++ii)\n            {\n                difPhase[ii] = phaseHistory[nextTrace][ii] - phaseHistory[lastTrace][ii];\n                difBunchLength[ii] = bunchLengthHistory[nextTrace][ii] - bunchLengthHistory[lastTrace][ii];\n            }\n        }\n        for (var mode = 0; mode < 88; ++mode)\n        {\n            var modeI = 0.0;\n            var modeQ = 0.0;\n            var modeIB = 0.0;\n            var modeQB = 0.0;\n            for (var bunch = 0; bunch < 176; ++bunch)\n            {\n                modeI = modeI + Math.cos(twoPi * mode  * bunch / 176.0 ) * difPhase[bunch];\n                modeQ = modeQ + Math.sin(twoPi * mode  * bunch / 176.0 ) * difPhase[bunch];\n                modeIB = modeIB + Math.cos(twoPi * mode  * bunch / 176.0 ) * difBunchLength[bunch];\n                modeQB = modeQB + Math.sin(twoPi * mode  * bunch / 176.0 ) * difBunchLength[bunch];\n            }\n            modeI = modeI / 176.0;\n            modeQ = modeQ / 176.0;\n            modeM[mode] = Math.sqrt(modeI * modeI + modeQ * modeQ);\n            modeIB = modeIB / 176.0;\n            modeQB = modeQB / 176.0;\n            modeB[mode] = Math.sqrt(modeIB * modeIB + modeQB * modeQB);\n        }\n\n        var msg4 =\n        {\n            'topic':'chanData',\n            'payload':[magn, difPhase, modeM, trace1, trace2, trace3, bunchLength, difBunchLength, modeB, phase, peakIntensity]\n        }\n        flow.set('waitingForData', false);\n        return [null, null,null,msg4];\n    }\n}\n",
+        "outputs": 4,
+        "noerr": 0,
+        "x": 420,
+        "y": 160,
+        "wires": [
+            [
+                "d8e2e763.05bf28"
+            ],
+            [
+                "c6fc2dff.81b47"
+            ],
+            [
+                "686d816d.4da27"
+            ],
+            [
+                "98672d92.d29d5"
+            ]
+        ]
+    },
+    {
+        "id": "d8e2e763.05bf28",
+        "type": "tcp out",
+        "z": "465cfd27.107674",
+        "host": "",
+        "port": "5025",
+        "beserver": "reply",
+        "base64": false,
+        "end": false,
+        "name": "Send To Scope",
+        "x": 700,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "c6fc2dff.81b47",
+        "type": "delay",
+        "z": "465cfd27.107674",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 680,
+        "y": 80,
+        "wires": [
+            [
+                "d8e2e763.05bf28"
+            ]
+        ]
+    },
+    {
+        "id": "14d88e1.4251472",
+        "type": "link out",
+        "z": "465cfd27.107674",
+        "name": "Scope",
+        "links": [
+            "e4413d6b.06be8",
+            "1df9b553.71b65b"
+        ],
+        "x": 195,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "e4413d6b.06be8",
+        "type": "link in",
+        "z": "465cfd27.107674",
+        "name": "Get Trace Data",
+        "links": [
+            "14d88e1.4251472"
+        ],
+        "x": 295,
+        "y": 160,
+        "wires": [
+            [
+                "930c042e.89ef48"
+            ]
+        ]
+    },
+    {
+        "id": "1df9b553.71b65b",
+        "type": "link in",
+        "z": "465cfd27.107674",
+        "name": "Get Bits / Channel",
+        "links": [
+            "14d88e1.4251472"
+        ],
+        "x": 1095,
+        "y": 160,
+        "wires": [
+            [
+                "60c7cd1b.10cfb4"
+            ]
+        ]
+    },
+    {
+        "id": "841328b1.e2e9c8",
+        "type": "function",
+        "z": "465cfd27.107674",
+        "name": "Trigger Slope",
+        "func": "return {'topic':'trigSlope','payload':msg.payload.trigSlope};\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 840,
+        "y": 960,
+        "wires": [
+            [
+                "19f10861.052478"
+            ]
+        ]
+    },
+    {
+        "id": "19f10861.052478",
+        "type": "ui_text_input",
+        "z": "465cfd27.107674",
+        "name": "Trigger Slope",
+        "label": "Slope",
+        "group": "f2ccb85.2f64a48",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "trigSlope",
+        "x": 1060,
+        "y": 960,
+        "wires": [
+            [
+                "a120de86.021da"
+            ]
+        ]
+    },
+    {
+        "id": "17326496.5ac8eb",
+        "type": "ui_text_input",
+        "z": "465cfd27.107674",
+        "name": "RF Freq",
+        "label": "RF Freq. (MHz)",
+        "group": "5360132d.12ff6c",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "rfFreq",
+        "x": 1080,
+        "y": 1080,
+        "wires": [
+            [
+                "a120de86.021da"
+            ]
+        ]
+    },
+    {
+        "id": "65f4b7a7.9aaf78",
+        "type": "function",
+        "z": "465cfd27.107674",
+        "name": "RF Freq",
+        "func": "flow.set('rfFreq', Number(msg.payload.rfFreq));\nreturn {'topic':'rfFreq','payload':msg.payload.rfFreq};\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 820,
+        "y": 1080,
+        "wires": [
+            [
+                "17326496.5ac8eb"
+            ]
+        ]
+    },
+    {
+        "id": "7c763cc3.80c7d4",
+        "type": "function",
+        "z": "465cfd27.107674",
+        "name": "CHAN1:DATA:HEAD?",
+        "func": "return {'topic':'getChan1','payload':'CHAN1:DATA:HEAD?\\n'};",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1160,
+        "y": 260,
+        "wires": [
+            [
+                "5c33919a.1d596"
+            ]
+        ]
+    },
+    {
+        "id": "7fceb61d.c2cbd8",
+        "type": "ui_chart",
+        "z": "465cfd27.107674",
+        "name": "",
+        "group": "e91ce1c7.f52e",
+        "order": 1,
+        "width": "6",
+        "height": "6",
+        "label": "Bunch Intensity (mA)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "Bunch Number",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "x": 540,
+        "y": 540,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "2c0eb9ec.ebb2b6",
+        "type": "function",
+        "z": "465cfd27.107674",
+        "name": "Plot Intensity",
+        "func": "var m={};\nm.labels = [];\n\nfor (var ii = 0; ii < 176; ++ii)\n{\n    m.labels[ii] = ii;\n}\nm.series = ['I'];\nm.data = [\n    msg.payload[0]\n  ];\nreturn {payload:[m]};",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 330,
+        "y": 540,
+        "wires": [
+            [
+                "7fceb61d.c2cbd8"
+            ]
+        ]
+    },
+    {
+        "id": "7bace7c7.779588",
+        "type": "ui_chart",
+        "z": "465cfd27.107674",
+        "name": "",
+        "group": "10775904.8072d7",
+        "order": 2,
+        "width": "6",
+        "height": "6",
+        "label": "Differential Phase (pS)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "Bunch Number",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "-500",
+        "ymax": "500",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "x": 540,
+        "y": 580,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "54feac6d.d5e8e4",
+        "type": "function",
+        "z": "465cfd27.107674",
+        "name": "Plot Phase",
+        "func": "var m={};\nm.labels = [];\nfor (var ii = 0; ii < 176; ++ii)\n{\n    m.labels[ii] = ii;\n} \nm.series = ['Phase'];\nm.data = [\n    msg.payload[1]\n  ];\nreturn {payload:[m]};",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 330,
+        "y": 580,
+        "wires": [
+            [
+                "7bace7c7.779588"
+            ]
+        ]
+    },
+    {
+        "id": "74e9405f.0bb51",
+        "type": "ui_chart",
+        "z": "465cfd27.107674",
+        "name": "",
+        "group": "867dd96a.fb4728",
+        "order": 1,
+        "width": "6",
+        "height": "6",
+        "label": "Mode Amplitude (pS)",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "Bunch Number",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#ffffff",
+            "#bfc4ff",
+            "#7681ff",
+            "#4554ff",
+            "#0015ff",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "x": 540,
+        "y": 660,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "3c019e70.c8d082",
+        "type": "function",
+        "z": "465cfd27.107674",
+        "name": "Plot Modes",
+        "func": "var itrace = context.get('itrace');\nvar itraceX = 0;\nif (itrace !== undefined)\n{\n     itraceX = itrace;\n}\nvar modeHistory = flow.get('modeHistory');\nvar modeHistory2 = [];\nmodeHistory2[0]  = msg.payload[2];\nfor (var ii = 0; ii < 4; ++ ii)  modeHistory2[1 + ii] = modeHistory[ii];\nflow.set('modeHistory', modeHistory2);\nvar m={};\nm.labels = [];\nfor (var ii = 0; ii < 88; ++ii)\n{\n    m.labels[ii] = ii;\n} \nm.series = ['1', '2', '3', '4', '5'];\n\nm.data = [\n    modeHistory2[0], modeHistory2[1], modeHistory2[2], modeHistory2[3], modeHistory2[4]\n  ];\n\nitraceX = itraceX + 1;\nif (itraceX > 4) itraceX = 0;\ncontext.set('itrace', itraceX);\nreturn {payload:[m]};",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 330,
+        "y": 660,
+        "wires": [
+            [
+                "74e9405f.0bb51"
+            ]
+        ]
+    },
+    {
+        "id": "98672d92.d29d5",
+        "type": "link out",
+        "z": "465cfd27.107674",
+        "name": "Traces",
+        "links": [
+            "9d39b279.21c5d",
+            "93887ac6.f444d8",
+            "659a7955.d24518",
+            "c663fe1.a75a6"
+        ],
+        "x": 555,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "9d39b279.21c5d",
+        "type": "link in",
+        "z": "465cfd27.107674",
+        "name": "Get Traces",
+        "links": [
+            "98672d92.d29d5"
+        ],
+        "x": 160,
+        "y": 580,
+        "wires": [
+            [
+                "2c0eb9ec.ebb2b6",
+                "54feac6d.d5e8e4",
+                "3c019e70.c8d082",
+                "8a7a1ab6.689d48",
+                "cb372851.3466f8",
+                "8546e5aa.01f4f8",
+                "7fa8226b.784f6c",
+                "1e2a74b0.71c8db",
+                "7b409099.f7126",
+                "9416c3b4.c38bc",
+                "d5bac330.f43c7",
+                "896741f9.9d57f",
+                "527b9c94.2c8984",
+                "1aab105.fc465f",
+                "7d82cd77.a83e24"
+            ]
+        ]
+    },
+    {
+        "id": "8a7a1ab6.689d48",
+        "type": "function",
+        "z": "465cfd27.107674",
+        "name": "Plot Trace 1",
+        "func": "var m={};\nm.labels = [];\n\nfor (var ii = 0; ii < 176; ++ii)\n{\n    m.labels[ii] = ii;\n}\nm.series = ['I'];\nm.data = [\n    msg.payload[3]\n  ];\nreturn {payload:[m]};",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 330,
+        "y": 700,
+        "wires": [
+            [
+                "149c3ae1.699c15"
+            ]
+        ]
+    },
+    {
+        "id": "149c3ae1.699c15",
+        "type": "ui_chart",
+        "z": "465cfd27.107674",
+        "name": "",
+        "group": "51491548.9210fc",
+        "order": 1,
+        "width": "6",
+        "height": "6",
+        "label": "I Trace (Volts)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "Bunch Number",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "x": 520,
+        "y": 700,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "cb372851.3466f8",
+        "type": "function",
+        "z": "465cfd27.107674",
+        "name": "Plot Trace 2",
+        "func": "var m={};\nm.labels = [];\n\nfor (var ii = 0; ii < 176; ++ii)\n{\n    m.labels[ii] = ii;\n}\nm.series = ['I'];\nm.data = [\n    msg.payload[4]\n  ];\nreturn {payload:[m]};",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 330,
+        "y": 740,
+        "wires": [
+            [
+                "338fb75c.463678"
+            ]
+        ]
+    },
+    {
+        "id": "338fb75c.463678",
+        "type": "ui_chart",
+        "z": "465cfd27.107674",
+        "name": "",
+        "group": "51491548.9210fc",
+        "order": 2,
+        "width": "6",
+        "height": "6",
+        "label": "Q Trace (Volts)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "Bunch Number",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "x": 520,
+        "y": 740,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "8546e5aa.01f4f8",
+        "type": "function",
+        "z": "465cfd27.107674",
+        "name": "Trace1 Mode T plot",
+        "func": "var modeTimeModes = flow.get('modeTimeModes');\nreturn {'topic':modeTimeModes.trace1,'payload':msg.payload[2][Number(modeTimeModes.trace1)]};",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 350,
+        "y": 960,
+        "wires": [
+            [
+                "8e31d452.f502a8"
+            ]
+        ]
+    },
+    {
+        "id": "8e31d452.f502a8",
+        "type": "ui_chart",
+        "z": "465cfd27.107674",
+        "name": "",
+        "group": "867dd96a.fb4728",
+        "order": 2,
+        "width": "6",
+        "height": "5",
+        "label": "Mode History (pS)",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "10",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#ff0000",
+            "#ffff00",
+            "#00ff00",
+            "#ff8000",
+            "#0015ff",
+            "#ff00ff",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "x": 610,
+        "y": 960,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "52c30ff.5c2cdf",
+        "type": "ui_text_input",
+        "z": "465cfd27.107674",
+        "name": "",
+        "label": "Tr 1",
+        "group": "867dd96a.fb4728",
+        "order": 3,
+        "width": "1",
+        "height": "1",
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "trace1",
+        "x": 270,
+        "y": 1200,
+        "wires": [
+            [
+                "8028aee9.22ab3"
+            ]
+        ]
+    },
+    {
+        "id": "b153fa97.102088",
+        "type": "inject",
+        "z": "465cfd27.107674",
+        "name": "",
+        "topic": "trace1",
+        "payload": "0",
+        "payloadType": "num",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "x": 120,
+        "y": 1280,
+        "wires": [
+            [
+                "52c30ff.5c2cdf",
+                "cd4c71bd.23b3e",
+                "55444170.c2cd4",
+                "438a1b40.c0ae14",
+                "c98a5b08.dca3c8"
+            ]
+        ]
+    },
+    {
+        "id": "cd4c71bd.23b3e",
+        "type": "ui_text_input",
+        "z": "465cfd27.107674",
+        "name": "",
+        "label": "Tr 2",
+        "group": "867dd96a.fb4728",
+        "order": 4,
+        "width": "1",
+        "height": "1",
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "trace2",
+        "x": 270,
+        "y": 1240,
+        "wires": [
+            [
+                "8028aee9.22ab3"
+            ]
+        ]
+    },
+    {
+        "id": "55444170.c2cd4",
+        "type": "ui_text_input",
+        "z": "465cfd27.107674",
+        "name": "",
+        "label": "Tr 3",
+        "group": "867dd96a.fb4728",
+        "order": 5,
+        "width": "1",
+        "height": "1",
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "trace3",
+        "x": 270,
+        "y": 1280,
+        "wires": [
+            [
+                "8028aee9.22ab3"
+            ]
+        ]
+    },
+    {
+        "id": "438a1b40.c0ae14",
+        "type": "ui_text_input",
+        "z": "465cfd27.107674",
+        "name": "",
+        "label": "Tr 4",
+        "group": "867dd96a.fb4728",
+        "order": 6,
+        "width": "1",
+        "height": "1",
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "trace4",
+        "x": 270,
+        "y": 1320,
+        "wires": [
+            [
+                "8028aee9.22ab3"
+            ]
+        ]
+    },
+    {
+        "id": "c98a5b08.dca3c8",
+        "type": "ui_text_input",
+        "z": "465cfd27.107674",
+        "name": "",
+        "label": "Tr 5",
+        "group": "867dd96a.fb4728",
+        "order": 7,
+        "width": "1",
+        "height": "1",
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "trace5",
+        "x": 270,
+        "y": 1360,
+        "wires": [
+            [
+                "8028aee9.22ab3"
+            ]
+        ]
+    },
+    {
+        "id": "8028aee9.22ab3",
+        "type": "function",
+        "z": "465cfd27.107674",
+        "name": "ModeTimeModes",
+        "func": "var modeTimeModes = flow.get('modeTimeModes');\nmodeTimeModes[msg.topic] = msg.payload;\nflow.set('modeTimeModes', modeTimeModes );\nreturn {'topic':'plot','payload':[]};",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 500,
+        "y": 1260,
+        "wires": [
+            [
+                "8e31d452.f502a8"
+            ]
+        ]
+    },
+    {
+        "id": "7fa8226b.784f6c",
+        "type": "function",
+        "z": "465cfd27.107674",
+        "name": "Trace2 Mode T plot",
+        "func": "var modeTimeModes = flow.get('modeTimeModes');\nreturn {'topic':modeTimeModes.trace2,'payload':msg.payload[2][Number(modeTimeModes.trace2)]};",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 350,
+        "y": 1000,
+        "wires": [
+            [
+                "8e31d452.f502a8"
+            ]
+        ]
+    },
+    {
+        "id": "1e2a74b0.71c8db",
+        "type": "function",
+        "z": "465cfd27.107674",
+        "name": "Trace3 Mode T plot",
+        "func": "var modeTimeModes = flow.get('modeTimeModes');\nreturn {'topic':modeTimeModes.trace3,'payload':msg.payload[2][Number(modeTimeModes.trace3)]};",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 350,
+        "y": 1040,
+        "wires": [
+            [
+                "8e31d452.f502a8"
+            ]
+        ]
+    },
+    {
+        "id": "7b409099.f7126",
+        "type": "function",
+        "z": "465cfd27.107674",
+        "name": "Trace4 Mode T plot",
+        "func": "var modeTimeModes = flow.get('modeTimeModes');\nreturn {'topic':modeTimeModes.trace4,'payload':msg.payload[2][Number(modeTimeModes.trace4)]};",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 350,
+        "y": 1080,
+        "wires": [
+            [
+                "8e31d452.f502a8"
+            ]
+        ]
+    },
+    {
+        "id": "9416c3b4.c38bc",
+        "type": "function",
+        "z": "465cfd27.107674",
+        "name": "Trace5 Mode T plot",
+        "func": "var modeTimeModes = flow.get('modeTimeModes');\nreturn {'topic':modeTimeModes.trace5,'payload':msg.payload[2][Number(modeTimeModes.trace5)]};",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 350,
+        "y": 1120,
+        "wires": [
+            [
+                "8e31d452.f502a8"
+            ]
+        ]
+    },
+    {
+        "id": "2d556bf3.c3d174",
+        "type": "function",
+        "z": "465cfd27.107674",
+        "name": "Chan4 Scale",
+        "func": "return {'topic':'chan4Scal','payload':msg.payload.chan4Scal};\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 830,
+        "y": 520,
+        "wires": [
+            [
+                "348126f2.3e531a"
+            ]
+        ]
+    },
+    {
+        "id": "348126f2.3e531a",
+        "type": "ui_text_input",
+        "z": "465cfd27.107674",
+        "name": "Channel 4 Scale",
+        "label": "Scale",
+        "group": "81b3993a.0cc418",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "chan4Scal",
+        "x": 1060,
+        "y": 520,
+        "wires": [
+            [
+                "a120de86.021da"
+            ]
+        ]
+    },
+    {
+        "id": "68cec066.6f5",
+        "type": "function",
+        "z": "465cfd27.107674",
+        "name": "Chan4 Pos",
+        "func": "return {'topic':'chan4Pos','payload':msg.payload.chan4Pos};\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 830,
+        "y": 680,
+        "wires": [
+            [
+                "30ec64c1.1cd54c"
+            ]
+        ]
+    },
+    {
+        "id": "30ec64c1.1cd54c",
+        "type": "ui_text_input",
+        "z": "465cfd27.107674",
+        "name": "Channel 4 Position",
+        "label": "Position",
+        "group": "81b3993a.0cc418",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "chan4Pos",
+        "x": 1050,
+        "y": 680,
+        "wires": [
+            [
+                "a120de86.021da"
+            ]
+        ]
+    },
+    {
+        "id": "4438a99a.29a6f8",
+        "type": "function",
+        "z": "465cfd27.107674",
+        "name": "Chan4 Pol",
+        "func": "return {'topic':'chan4Pol','payload':msg.payload.chan4Pol};\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 830,
+        "y": 840,
+        "wires": [
+            [
+                "f5309246.65764"
+            ]
+        ]
+    },
+    {
+        "id": "f5309246.65764",
+        "type": "ui_text_input",
+        "z": "465cfd27.107674",
+        "name": "Channel 4 Polarity",
+        "label": "Polarity",
+        "group": "81b3993a.0cc418",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "chan4Pol",
+        "x": 1050,
+        "y": 840,
+        "wires": [
+            [
+                "a120de86.021da"
+            ]
+        ]
+    },
+    {
+        "id": "686d816d.4da27",
+        "type": "delay",
+        "z": "465cfd27.107674",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 680,
+        "y": 120,
+        "wires": [
+            [
+                "d8e2e763.05bf28"
+            ]
+        ]
+    },
+    {
+        "id": "d5bac330.f43c7",
+        "type": "function",
+        "z": "465cfd27.107674",
+        "name": "Plot Peak Intensity",
+        "func": "var m={};\nm.labels = [];\n\nfor (var ii = 0; ii < 176; ++ii)\n{\n    m.labels[ii] = ii;\n}\nm.series = ['I'];\nm.data = [\n    msg.payload[10]\n  ];\nreturn {payload:[m]};",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 350,
+        "y": 780,
+        "wires": [
+            [
+                "7d895e61.21d07"
+            ]
+        ]
+    },
+    {
+        "id": "7d895e61.21d07",
+        "type": "ui_chart",
+        "z": "465cfd27.107674",
+        "name": "",
+        "group": "e91ce1c7.f52e",
+        "order": 2,
+        "width": "6",
+        "height": "6",
+        "label": "Peak Intensity (mA)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "Bunch Number",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "x": 530,
+        "y": 780,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "896741f9.9d57f",
+        "type": "function",
+        "z": "465cfd27.107674",
+        "name": "Plot BunchLength",
+        "func": "var m={};\nm.labels = [];\n\nfor (var ii = 0; ii < 176; ++ii)\n{\n    m.labels[ii] = ii;\n}\nm.series = ['I'];\nm.data = [\n    msg.payload[6]\n  ];\nreturn {payload:[m]};",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 350,
+        "y": 820,
+        "wires": [
+            [
+                "3d598cd3.cb60d4"
+            ]
+        ]
+    },
+    {
+        "id": "3d598cd3.cb60d4",
+        "type": "ui_chart",
+        "z": "465cfd27.107674",
+        "name": "",
+        "group": "62dd7ac8.98fca4",
+        "order": 2,
+        "width": "6",
+        "height": "6",
+        "label": "Bunch Length (pS)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "Bunch Number",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "x": 550,
+        "y": 820,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "527b9c94.2c8984",
+        "type": "function",
+        "z": "465cfd27.107674",
+        "name": "Plot Diff Length",
+        "func": "var m={};\nm.labels = [];\nfor (var ii = 0; ii < 176; ++ii)\n{\n    m.labels[ii] = ii;\n} \nm.series = ['Phase'];\nm.data = [\n    msg.payload[7]\n  ];\nreturn {payload:[m]};",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 340,
+        "y": 860,
+        "wires": [
+            [
+                "19c35863.b34478"
+            ]
+        ]
+    },
+    {
+        "id": "19c35863.b34478",
+        "type": "ui_chart",
+        "z": "465cfd27.107674",
+        "name": "Diff Length",
+        "group": "62dd7ac8.98fca4",
+        "order": 3,
+        "width": "6",
+        "height": "6",
+        "label": "Differential Bunch Length (pS)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "Bunch Number",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "-50",
+        "ymax": "50",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "x": 510,
+        "y": 860,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "1aab105.fc465f",
+        "type": "function",
+        "z": "465cfd27.107674",
+        "name": "Plot Length Modes",
+        "func": "var itrace = context.get('itrace');\nvar itraceX = 0;\nif (itrace !== undefined)\n{\n     itraceX = itrace;\n}\nvar modeHistory = flow.get('modeBHistory');\nvar modeHistory2 = [];\nmodeHistory2[0]  = msg.payload[8];\nfor (var ii = 0; ii < 4; ++ ii)  modeHistory2[1 + ii] = modeHistory[ii];\nflow.set('modeBHistory', modeHistory2);\nvar m={};\nm.labels = [];\nfor (var ii = 0; ii < 88; ++ii)\n{\n    m.labels[ii] = ii;\n} \nm.series = ['1', '2', '3', '4', '5'];\n\nm.data = [\n    modeHistory2[0], modeHistory2[1], modeHistory2[2], modeHistory2[3], modeHistory2[4]\n  ];\n\nitraceX = itraceX + 1;\nif (itraceX > 4) itraceX = 0;\ncontext.set('itrace', itraceX);\nreturn {payload:[m]};",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 350,
+        "y": 900,
+        "wires": [
+            [
+                "2b573802.fb54b8"
+            ]
+        ]
+    },
+    {
+        "id": "2b573802.fb54b8",
+        "type": "ui_chart",
+        "z": "465cfd27.107674",
+        "name": "",
+        "group": "2892090b.ae6526",
+        "order": 1,
+        "width": "6",
+        "height": "6",
+        "label": "Mode Amplitude (pS)",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "Bunch Number",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#ffffff",
+            "#bfc4ff",
+            "#7681ff",
+            "#4554ff",
+            "#0015ff",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "x": 560,
+        "y": 900,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "c1b547.4bdeeab8",
+        "type": "function",
+        "z": "465cfd27.107674",
+        "name": "Trace1 ModeB T plot",
+        "func": "var modeBTimeModes = flow.get('modeBTimeModes');\nreturn {'topic':modeBTimeModes.trace1,'payload':msg.payload[8][Number(modeBTimeModes.trace1)]};",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 320,
+        "y": 1420,
+        "wires": [
+            [
+                "b302e69a.c8b198"
+            ]
+        ]
+    },
+    {
+        "id": "b302e69a.c8b198",
+        "type": "ui_chart",
+        "z": "465cfd27.107674",
+        "name": "",
+        "group": "2892090b.ae6526",
+        "order": 2,
+        "width": "6",
+        "height": "5",
+        "label": "Bunch Length Mode History (ps)",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "10",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#ff0000",
+            "#ffff00",
+            "#00ff00",
+            "#ff8000",
+            "#0015ff",
+            "#ff00ff",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "x": 610,
+        "y": 1420,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "a0f0aa24.298b48",
+        "type": "function",
+        "z": "465cfd27.107674",
+        "name": "Trace2 ModeB T plot",
+        "func": "var modeBTimeModes = flow.get('modeBTimeModes');\nreturn {'topic':modeBTimeModes.trace2,'payload':msg.payload[8][Number(modeBTimeModes.trace2)]};",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 320,
+        "y": 1460,
+        "wires": [
+            [
+                "b302e69a.c8b198"
+            ]
+        ]
+    },
+    {
+        "id": "22f75090.6fa93",
+        "type": "function",
+        "z": "465cfd27.107674",
+        "name": "Trace3 ModeB T plot",
+        "func": "var modeBTimeModes = flow.get('modeBTimeModes');\nreturn {'topic':modeBTimeModes.trace3,'payload':msg.payload[8][Number(modeBTimeModes.trace3)]};",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 320,
+        "y": 1500,
+        "wires": [
+            [
+                "b302e69a.c8b198"
+            ]
+        ]
+    },
+    {
+        "id": "39711f81.fd9b9",
+        "type": "function",
+        "z": "465cfd27.107674",
+        "name": "Trace4 ModeB T plot",
+        "func": "var modeBTimeModes = flow.get('modeBTimeModes');\nreturn {'topic':modeBTimeModes.trace4,'payload':msg.payload[8][Number(modeBTimeModes.trace4)]};",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 320,
+        "y": 1540,
+        "wires": [
+            [
+                "b302e69a.c8b198"
+            ]
+        ]
+    },
+    {
+        "id": "7f065f51.04e8c",
+        "type": "function",
+        "z": "465cfd27.107674",
+        "name": "Trace5 ModeB T plot",
+        "func": "var modeBTimeModes = flow.get('modeBTimeModes');\nreturn {'topic':modeBTimeModes.trace5,'payload':msg.payload[8][Number(modeBTimeModes.trace5)]};",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 320,
+        "y": 1580,
+        "wires": [
+            [
+                "b302e69a.c8b198"
+            ]
+        ]
+    },
+    {
+        "id": "4f0d14ef.62b26c",
+        "type": "ui_text_input",
+        "z": "465cfd27.107674",
+        "name": "",
+        "label": "Tr 1",
+        "group": "2892090b.ae6526",
+        "order": 3,
+        "width": "1",
+        "height": "1",
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "trace1",
+        "x": 310,
+        "y": 1660,
+        "wires": [
+            [
+                "52f9874d.e75fb8"
+            ]
+        ]
+    },
+    {
+        "id": "5d4252b2.b9e38c",
+        "type": "inject",
+        "z": "465cfd27.107674",
+        "name": "",
+        "topic": "trace1",
+        "payload": "0",
+        "payloadType": "num",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "x": 160,
+        "y": 1740,
+        "wires": [
+            [
+                "4f0d14ef.62b26c",
+                "f65b3bad.522b18",
+                "476eb65c.5667f8",
+                "59ecbb0.9204c44",
+                "bb31003a.9353b"
+            ]
+        ]
+    },
+    {
+        "id": "f65b3bad.522b18",
+        "type": "ui_text_input",
+        "z": "465cfd27.107674",
+        "name": "",
+        "label": "Tr 2",
+        "group": "2892090b.ae6526",
+        "order": 4,
+        "width": "1",
+        "height": "1",
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "trace2",
+        "x": 310,
+        "y": 1700,
+        "wires": [
+            [
+                "52f9874d.e75fb8"
+            ]
+        ]
+    },
+    {
+        "id": "476eb65c.5667f8",
+        "type": "ui_text_input",
+        "z": "465cfd27.107674",
+        "name": "",
+        "label": "Tr 3",
+        "group": "2892090b.ae6526",
+        "order": 5,
+        "width": "1",
+        "height": "1",
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "trace3",
+        "x": 310,
+        "y": 1740,
+        "wires": [
+            [
+                "52f9874d.e75fb8"
+            ]
+        ]
+    },
+    {
+        "id": "59ecbb0.9204c44",
+        "type": "ui_text_input",
+        "z": "465cfd27.107674",
+        "name": "",
+        "label": "Tr 4",
+        "group": "2892090b.ae6526",
+        "order": 6,
+        "width": "1",
+        "height": "1",
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "trace4",
+        "x": 310,
+        "y": 1780,
+        "wires": [
+            [
+                "52f9874d.e75fb8"
+            ]
+        ]
+    },
+    {
+        "id": "bb31003a.9353b",
+        "type": "ui_text_input",
+        "z": "465cfd27.107674",
+        "name": "",
+        "label": "Tr 5",
+        "group": "2892090b.ae6526",
+        "order": 7,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "trace5",
+        "x": 310,
+        "y": 1820,
+        "wires": [
+            [
+                "52f9874d.e75fb8"
+            ]
+        ]
+    },
+    {
+        "id": "52f9874d.e75fb8",
+        "type": "function",
+        "z": "465cfd27.107674",
+        "name": "ModeTimeModes",
+        "func": "var modeBTimeModes = flow.get('modeBTimeModes');\nmodeBTimeModes[msg.topic] = msg.payload;\nflow.set('modeBTimeModes', modeBTimeModes );\nreturn {'topic':'plot','payload':[]};",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 540,
+        "y": 1720,
+        "wires": [
+            [
+                "b302e69a.c8b198"
+            ]
+        ]
+    },
+    {
+        "id": "659a7955.d24518",
+        "type": "link in",
+        "z": "465cfd27.107674",
+        "name": "Get Traces",
+        "links": [
+            "98672d92.d29d5"
+        ],
+        "x": 95,
+        "y": 1420,
+        "wires": [
+            [
+                "c1b547.4bdeeab8",
+                "a0f0aa24.298b48",
+                "22f75090.6fa93",
+                "39711f81.fd9b9",
+                "7f065f51.04e8c"
+            ]
+        ]
+    },
+    {
+        "id": "7d82cd77.a83e24",
+        "type": "function",
+        "z": "465cfd27.107674",
+        "name": "Plot Phase",
+        "func": "var m={};\nm.labels = [];\nfor (var ii = 0; ii < 176; ++ii)\n{\n    m.labels[ii] = ii;\n} \nm.series = ['Phase'];\nm.data = [\n    msg.payload[9]\n  ];\nreturn {payload:[m]};",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 330,
+        "y": 620,
+        "wires": [
+            [
+                "3bd2911.6652f6e"
+            ]
+        ]
+    },
+    {
+        "id": "3bd2911.6652f6e",
+        "type": "ui_chart",
+        "z": "465cfd27.107674",
+        "name": "",
+        "group": "10775904.8072d7",
+        "order": 1,
+        "width": "6",
+        "height": "6",
+        "label": "Phase (pS)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "Bunch Number",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "-500",
+        "ymax": "500",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "x": 510,
+        "y": 620,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "24a7f303.d6668c",
+        "type": "serial out",
+        "z": "2450c4c2.c3b524",
+        "name": "Teensy3.5",
+        "serial": "e1719692.a724c8",
+        "x": 770,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "d21d9302.9577f",
+        "type": "ui_numeric",
+        "z": "2450c4c2.c3b524",
+        "name": "timeOffset0",
+        "label": "Time Offset",
+        "group": "a0b953d3.6ba41",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "topic": "timeOffset0",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "step": 1,
+        "x": 310,
+        "y": 180,
+        "wires": [
+            [
+                "33e1c49d.b82114"
+            ]
+        ]
+    },
+    {
+        "id": "20567709.a1c3c8",
+        "type": "inject",
+        "z": "2450c4c2.c3b524",
+        "name": "",
+        "topic": "timeOffset0",
+        "payload": "10",
+        "payloadType": "num",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.2",
+        "x": 120,
+        "y": 140,
+        "wires": [
+            [
+                "d21d9302.9577f",
+                "5382d7f5.424bc8"
+            ]
+        ]
+    },
+    {
+        "id": "c9ba1837.58d9b",
+        "type": "debug",
+        "z": "2450c4c2.c3b524",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 770,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "33e1c49d.b82114",
+        "type": "function",
+        "z": "2450c4c2.c3b524",
+        "name": "Parse setting",
+        "func": "msg.payload = msg.topic + ' ' + msg.payload.toString();\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 570,
+        "y": 280,
+        "wires": [
+            [
+                "24a7f303.d6668c",
+                "c9ba1837.58d9b"
+            ]
+        ]
+    },
+    {
+        "id": "7df7628.581ce1c",
+        "type": "ui_numeric",
+        "z": "2450c4c2.c3b524",
+        "name": "",
+        "label": "On",
+        "group": "a0b953d3.6ba41",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "topic": "chanOn0",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1",
+        "step": 1,
+        "x": 290,
+        "y": 80,
+        "wires": [
+            [
+                "33e1c49d.b82114"
+            ]
+        ]
+    },
+    {
+        "id": "87352e4c.50da5",
+        "type": "inject",
+        "z": "2450c4c2.c3b524",
+        "name": "",
+        "topic": "chanOn0",
+        "payload": "0",
+        "payloadType": "num",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.1",
+        "x": 110,
+        "y": 40,
+        "wires": [
+            [
+                "7df7628.581ce1c",
+                "de36e6c3.88cc38"
+            ]
+        ]
+    },
+    {
+        "id": "709e0695.f98dd8",
+        "type": "ui_numeric",
+        "z": "2450c4c2.c3b524",
+        "name": "",
+        "label": "Sign",
+        "group": "a0b953d3.6ba41",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "topic": "sign0",
+        "format": "{{value}}",
+        "min": "-1",
+        "max": "1",
+        "step": "2",
+        "x": 290,
+        "y": 280,
+        "wires": [
+            [
+                "33e1c49d.b82114"
+            ]
+        ]
+    },
+    {
+        "id": "237cdd01.ab88e2",
+        "type": "inject",
+        "z": "2450c4c2.c3b524",
+        "name": "",
+        "topic": "sign0",
+        "payload": "1",
+        "payloadType": "num",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.3",
+        "x": 100,
+        "y": 240,
+        "wires": [
+            [
+                "709e0695.f98dd8",
+                "d83409b5.06da28"
+            ]
+        ]
+    },
+    {
+        "id": "9f2084c7.335018",
+        "type": "inject",
+        "z": "2450c4c2.c3b524",
+        "name": "",
+        "topic": "dacOffset0",
+        "payload": "545",
+        "payloadType": "num",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.6",
+        "x": 120,
+        "y": 540,
+        "wires": [
+            [
+                "6e45b38b.973114",
+                "3bf72b11.0d013c",
+                "f7d16f9.6d6369"
+            ]
+        ]
+    },
+    {
+        "id": "f9c5f523.5a155",
+        "type": "inject",
+        "z": "2450c4c2.c3b524",
+        "name": "",
+        "topic": "maxAcValue0",
+        "payload": "50",
+        "payloadType": "num",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.4",
+        "x": 130,
+        "y": 340,
+        "wires": [
+            [
+                "ffa67500.68ee6",
+                "77231b6b.1b46ec"
+            ]
+        ]
+    },
+    {
+        "id": "ffa67500.68ee6",
+        "type": "ui_text_input",
+        "z": "2450c4c2.c3b524",
+        "name": "",
+        "label": "Max Value",
+        "group": "a0b953d3.6ba41",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": "1000",
+        "topic": "maxAcValue0",
+        "x": 310,
+        "y": 380,
+        "wires": [
+            [
+                "33e1c49d.b82114"
+            ]
+        ]
+    },
+    {
+        "id": "6e45b38b.973114",
+        "type": "ui_text_input",
+        "z": "2450c4c2.c3b524",
+        "name": "",
+        "label": "Offset",
+        "group": "a0b953d3.6ba41",
+        "order": 0,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "mode": "text",
+        "delay": "300",
+        "topic": "dacOffset0",
+        "x": 290,
+        "y": 620,
+        "wires": [
+            [
+                "3bf72b11.0d013c"
+            ]
+        ]
+    },
+    {
+        "id": "ec30a893.590cf",
+        "type": "ui_button",
+        "z": "2450c4c2.c3b524",
+        "name": "Send dacOffset0",
+        "group": "a0b953d3.6ba41",
+        "order": 0,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "Send",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 330,
+        "y": 660,
+        "wires": [
+            [
+                "ce18ccf4.2f1588"
+            ]
+        ]
+    },
+    {
+        "id": "3bf72b11.0d013c",
+        "type": "function",
+        "z": "2450c4c2.c3b524",
+        "name": "Store dacOffset0",
+        "func": "flow.set('dacOffset0',msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 470,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "94925a16.69955",
+        "type": "inject",
+        "z": "2450c4c2.c3b524",
+        "name": "",
+        "topic": "gain0",
+        "payload": "0",
+        "payloadType": "num",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.5",
+        "x": 100,
+        "y": 440,
+        "wires": [
+            [
+                "ccf44fc0.7a0ea",
+                "b312d1ea.0c3bc"
+            ]
+        ]
+    },
+    {
+        "id": "ccf44fc0.7a0ea",
+        "type": "ui_numeric",
+        "z": "2450c4c2.c3b524",
+        "name": "",
+        "label": "Gain",
+        "group": "a0b953d3.6ba41",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "topic": "gain0",
+        "format": "{{value}}",
+        "min": "-10",
+        "max": "10",
+        "step": "1",
+        "x": 290,
+        "y": 480,
+        "wires": [
+            [
+                "33e1c49d.b82114"
+            ]
+        ]
+    },
+    {
+        "id": "ce18ccf4.2f1588",
+        "type": "function",
+        "z": "2450c4c2.c3b524",
+        "name": "Send dacOffset0",
+        "func": "msg.payload = 'dacOffset0' + ' ' + flow.get('dacOffset0');\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 530,
+        "y": 660,
+        "wires": [
+            [
+                "24a7f303.d6668c"
+            ]
+        ]
+    },
+    {
+        "id": "de36e6c3.88cc38",
+        "type": "link out",
+        "z": "2450c4c2.c3b524",
+        "name": "chanOn0",
+        "links": [
+            "4a2fb42a.ef6bec"
+        ],
+        "x": 255,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "5382d7f5.424bc8",
+        "type": "link out",
+        "z": "2450c4c2.c3b524",
+        "name": "timeOffset0",
+        "links": [
+            "4a2fb42a.ef6bec"
+        ],
+        "x": 255,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "d83409b5.06da28",
+        "type": "link out",
+        "z": "2450c4c2.c3b524",
+        "name": "sign0",
+        "links": [
+            "4a2fb42a.ef6bec"
+        ],
+        "x": 255,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "77231b6b.1b46ec",
+        "type": "link out",
+        "z": "2450c4c2.c3b524",
+        "name": "maxAcValue0",
+        "links": [
+            "4a2fb42a.ef6bec"
+        ],
+        "x": 255,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "b312d1ea.0c3bc",
+        "type": "link out",
+        "z": "2450c4c2.c3b524",
+        "name": "gain0",
+        "links": [
+            "4a2fb42a.ef6bec"
+        ],
+        "x": 255,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "f7d16f9.6d6369",
+        "type": "link out",
+        "z": "2450c4c2.c3b524",
+        "name": "dacOffset0",
+        "links": [
+            "4a2fb42a.ef6bec"
+        ],
+        "x": 255,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "4a2fb42a.ef6bec",
+        "type": "link in",
+        "z": "2450c4c2.c3b524",
+        "name": "Parse Link",
+        "links": [
+            "f7d16f9.6d6369",
+            "77231b6b.1b46ec",
+            "b312d1ea.0c3bc",
+            "de36e6c3.88cc38",
+            "d83409b5.06da28",
+            "5382d7f5.424bc8"
+        ],
+        "x": 555,
+        "y": 200,
+        "wires": [
+            [
+                "33e1c49d.b82114"
+            ]
+        ]
+    },
+    {
+        "id": "ae1d3cd5.03d77",
+        "type": "serial out",
+        "z": "482fca47.901ea4",
+        "name": "Teensy3.5",
+        "serial": "e1719692.a724c8",
+        "x": 770,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "796c196c.86cf5",
+        "type": "ui_numeric",
+        "z": "482fca47.901ea4",
+        "name": "",
+        "label": "Time Offset",
+        "group": "7a4df6d1.1d139",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "topic": "timeOffset1",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "step": 1,
+        "x": 310,
+        "y": 180,
+        "wires": [
+            [
+                "ee71c5e4.de05d"
+            ]
+        ]
+    },
+    {
+        "id": "70c9f287.316b94",
+        "type": "inject",
+        "z": "482fca47.901ea4",
+        "name": "",
+        "topic": "timeOffset1",
+        "payload": "10",
+        "payloadType": "num",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.8",
+        "x": 120,
+        "y": 140,
+        "wires": [
+            [
+                "796c196c.86cf5",
+                "6be14c21.bfe8ec"
+            ]
+        ]
+    },
+    {
+        "id": "2157b1f9.55b69e",
+        "type": "debug",
+        "z": "482fca47.901ea4",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 770,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "ee71c5e4.de05d",
+        "type": "function",
+        "z": "482fca47.901ea4",
+        "name": "Parse setting",
+        "func": "msg.payload = msg.topic + ' ' + msg.payload.toString();\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 570,
+        "y": 280,
+        "wires": [
+            [
+                "ae1d3cd5.03d77",
+                "2157b1f9.55b69e"
+            ]
+        ]
+    },
+    {
+        "id": "c91abdf1.808358",
+        "type": "ui_numeric",
+        "z": "482fca47.901ea4",
+        "name": "",
+        "label": "On",
+        "group": "7a4df6d1.1d139",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "topic": "chanOn1",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1",
+        "step": 1,
+        "x": 290,
+        "y": 80,
+        "wires": [
+            [
+                "ee71c5e4.de05d"
+            ]
+        ]
+    },
+    {
+        "id": "cd9da8c6.a23dc",
+        "type": "inject",
+        "z": "482fca47.901ea4",
+        "name": "",
+        "topic": "chanOn1",
+        "payload": "0",
+        "payloadType": "num",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.7",
+        "x": 110,
+        "y": 40,
+        "wires": [
+            [
+                "c91abdf1.808358",
+                "7eb82629.8e7bc8"
+            ]
+        ]
+    },
+    {
+        "id": "ee36e2c5.db5f6",
+        "type": "ui_numeric",
+        "z": "482fca47.901ea4",
+        "name": "",
+        "label": "Sign",
+        "group": "7a4df6d1.1d139",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "topic": "sign1",
+        "format": "{{value}}",
+        "min": "-1",
+        "max": "1",
+        "step": "2",
+        "x": 290,
+        "y": 280,
+        "wires": [
+            [
+                "ee71c5e4.de05d"
+            ]
+        ]
+    },
+    {
+        "id": "b59782b9.1862f",
+        "type": "inject",
+        "z": "482fca47.901ea4",
+        "name": "",
+        "topic": "sign1",
+        "payload": "1",
+        "payloadType": "num",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.9",
+        "x": 100,
+        "y": 240,
+        "wires": [
+            [
+                "ee36e2c5.db5f6",
+                "388276e.7d6030a"
+            ]
+        ]
+    },
+    {
+        "id": "6d76bf51.98bb58",
+        "type": "inject",
+        "z": "482fca47.901ea4",
+        "name": "",
+        "topic": "dacOffset1",
+        "payload": "415",
+        "payloadType": "num",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1.2",
+        "x": 120,
+        "y": 540,
+        "wires": [
+            [
+                "59ce3fc1.0de1e8",
+                "1ff0fe18.bae582",
+                "8079cd96.fdd5e"
+            ]
+        ]
+    },
+    {
+        "id": "19593734.416af1",
+        "type": "inject",
+        "z": "482fca47.901ea4",
+        "name": "",
+        "topic": "maxAcValue1",
+        "payload": "100",
+        "payloadType": "num",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1.0",
+        "x": 130,
+        "y": 340,
+        "wires": [
+            [
+                "106fc55e.c18ebb",
+                "86db0a6e.20ddc8"
+            ]
+        ]
+    },
+    {
+        "id": "106fc55e.c18ebb",
+        "type": "ui_text_input",
+        "z": "482fca47.901ea4",
+        "name": "",
+        "label": "Max Value",
+        "group": "7a4df6d1.1d139",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": "1000",
+        "topic": "maxAcValue1",
+        "x": 310,
+        "y": 380,
+        "wires": [
+            [
+                "ee71c5e4.de05d"
+            ]
+        ]
+    },
+    {
+        "id": "59ce3fc1.0de1e8",
+        "type": "ui_text_input",
+        "z": "482fca47.901ea4",
+        "name": "",
+        "label": "Offset",
+        "group": "7a4df6d1.1d139",
+        "order": 6,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "mode": "text",
+        "delay": "300",
+        "topic": "dacOffset1",
+        "x": 290,
+        "y": 620,
+        "wires": [
+            [
+                "1ff0fe18.bae582"
+            ]
+        ]
+    },
+    {
+        "id": "182d39bf.6798c6",
+        "type": "ui_button",
+        "z": "482fca47.901ea4",
+        "name": "Send dacOffset1",
+        "group": "7a4df6d1.1d139",
+        "order": 7,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "Send",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 330,
+        "y": 660,
+        "wires": [
+            [
+                "2fed5dc6.e9e5fa"
+            ]
+        ]
+    },
+    {
+        "id": "1ff0fe18.bae582",
+        "type": "function",
+        "z": "482fca47.901ea4",
+        "name": "Store dacOffset1",
+        "func": "flow.set('dacOffset1',msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 470,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "66b79c3b.5a373c",
+        "type": "inject",
+        "z": "482fca47.901ea4",
+        "name": "",
+        "topic": "gain1",
+        "payload": "0",
+        "payloadType": "num",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1.1",
+        "x": 100,
+        "y": 440,
+        "wires": [
+            [
+                "704f4e7d.606d9",
+                "c99ad199.be896"
+            ]
+        ]
+    },
+    {
+        "id": "704f4e7d.606d9",
+        "type": "ui_numeric",
+        "z": "482fca47.901ea4",
+        "name": "",
+        "label": "Gain",
+        "group": "7a4df6d1.1d139",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "topic": "gain1",
+        "format": "{{value}}",
+        "min": "-10",
+        "max": "10",
+        "step": "1",
+        "x": 290,
+        "y": 480,
+        "wires": [
+            [
+                "ee71c5e4.de05d"
+            ]
+        ]
+    },
+    {
+        "id": "2fed5dc6.e9e5fa",
+        "type": "function",
+        "z": "482fca47.901ea4",
+        "name": "Send dacOffset1",
+        "func": "msg.payload = 'dacOffset1' + ' ' + flow.get('dacOffset1');\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 530,
+        "y": 660,
+        "wires": [
+            [
+                "ae1d3cd5.03d77"
+            ]
+        ]
+    },
+    {
+        "id": "7eb82629.8e7bc8",
+        "type": "link out",
+        "z": "482fca47.901ea4",
+        "name": "chanOn1",
+        "links": [
+            "ed11d919.9bb828"
+        ],
+        "x": 255,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "6be14c21.bfe8ec",
+        "type": "link out",
+        "z": "482fca47.901ea4",
+        "name": "timeOffset1",
+        "links": [
+            "ed11d919.9bb828"
+        ],
+        "x": 255,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "388276e.7d6030a",
+        "type": "link out",
+        "z": "482fca47.901ea4",
+        "name": "sign1",
+        "links": [
+            "ed11d919.9bb828"
+        ],
+        "x": 255,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "86db0a6e.20ddc8",
+        "type": "link out",
+        "z": "482fca47.901ea4",
+        "name": "maxAcValue1",
+        "links": [
+            "ed11d919.9bb828"
+        ],
+        "x": 255,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "c99ad199.be896",
+        "type": "link out",
+        "z": "482fca47.901ea4",
+        "name": "gain1",
+        "links": [
+            "ed11d919.9bb828"
+        ],
+        "x": 255,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "8079cd96.fdd5e",
+        "type": "link out",
+        "z": "482fca47.901ea4",
+        "name": "dacOffset1",
+        "links": [
+            "ed11d919.9bb828"
+        ],
+        "x": 255,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "ed11d919.9bb828",
+        "type": "link in",
+        "z": "482fca47.901ea4",
+        "name": "Parse Link",
+        "links": [
+            "86db0a6e.20ddc8",
+            "8079cd96.fdd5e",
+            "c99ad199.be896",
+            "388276e.7d6030a",
+            "7eb82629.8e7bc8",
+            "6be14c21.bfe8ec"
+        ],
+        "x": 555,
+        "y": 200,
+        "wires": [
+            [
+                "ee71c5e4.de05d"
+            ]
+        ]
+    }
+]
