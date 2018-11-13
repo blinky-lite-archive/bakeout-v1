@@ -1,0 +1,618 @@
+[
+    {
+        "id": "f7dae6bd.3a0418",
+        "type": "tab",
+        "label": "bake01",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "4a8b6312.c2f36c",
+        "type": "serial-port",
+        "z": "",
+        "serialport": "/dev/ttyS0",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": true
+    },
+    {
+        "id": "2199cfd8.9aa6b",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#000000",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            }
+        },
+        "site": {
+            "name": "Bakeout",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 44,
+                "sy": 44,
+                "gx": 1,
+                "gy": 1,
+                "cx": 1,
+                "cy": 1,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "ad4f30cc.06d7a",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "Shiftr",
+        "broker": "broker.shiftr.io",
+        "port": "1883",
+        "clientid": "bake-out-dma",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": ""
+    },
+    {
+        "id": "79fb9dbb.1d7b84",
+        "type": "rpi-gpio out",
+        "z": "f7dae6bd.3a0418",
+        "name": "GPIO4",
+        "pin": "7",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 990,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "68027591.f6dcec",
+        "type": "serial in",
+        "z": "f7dae6bd.3a0418",
+        "name": "Arduino",
+        "serial": "4a8b6312.c2f36c",
+        "x": 110,
+        "y": 80,
+        "wires": [
+            [
+                "fa59c418.635678"
+            ]
+        ]
+    },
+    {
+        "id": "fa59c418.635678",
+        "type": "function",
+        "z": "f7dae6bd.3a0418",
+        "name": "Read Temp",
+        "func": "var temperature = Number(msg.payload);\nnewMsg1 = {'topic':'bake01/temperature', 'payload':temperature};\nif (flow.get('blankTemperature')) return null;\nreturn newMsg1;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 270,
+        "y": 80,
+        "wires": [
+            [
+                "2457c57c.d5ffba",
+                "3efb1d68.be9742"
+            ]
+        ]
+    },
+    {
+        "id": "2457c57c.d5ffba",
+        "type": "function",
+        "z": "f7dae6bd.3a0418",
+        "name": "Regulation Control",
+        "func": "if (msg.topic == 'bake01/regulateTemp') context.set('regulateTemp', Number(msg.payload));\nif (msg.topic == 'bake01/regulateWindow') context.set('regulateWindow', Number(msg.payload));\nif (msg.topic == 'bake01/regulate') \n{\n    context.set('regulate', msg.payload);\n    if (!msg.payload)\n    {\n        var newMsg3 = {'topic':'bake01/HeaterStatus', 'payload':0};\n        return [null, null, newMsg3];        \n    }\n}\nif (msg.topic != 'bake01/temperature') return [null,null, null];\nvar regulateTemp =  context.get('regulateTemp');\nvar regulateWindow =  context.get('regulateWindow');\nvar regulate =  context.get('regulate');\nvar temperature = msg.payload;\nvar aboveWindow = false;\nif (temperature >  (regulateTemp + 0.5 * regulateWindow)) aboveWindow = true;\nvar belowWindow = false;\nif (temperature <  (regulateTemp - 0.5 * regulateWindow)) belowWindow = true;\nvar newMsg1 = {'topic':'bake01/aboveWindow', 'payload':aboveWindow};\nvar newMsg2 = {'topic':'bake01/belowWindow', 'payload':belowWindow};\nvar heaterOn = 0;\nvar newMsg3 = null;\nif (regulate)\n{\n    if (belowWindow) heaterOn = 1;\n    newMsg3 = {'topic':'bake01/HeaterStatus', 'payload':heaterOn};\n}\nreturn [newMsg1, newMsg2, newMsg3];",
+        "outputs": 3,
+        "noerr": 0,
+        "x": 530,
+        "y": 80,
+        "wires": [
+            [
+                "f1981a8b.9f3718"
+            ],
+            [
+                "8412ba9b.712bb8"
+            ],
+            [
+                "9b50574.dc18fa8"
+            ]
+        ]
+    },
+    {
+        "id": "9b50574.dc18fa8",
+        "type": "function",
+        "z": "f7dae6bd.3a0418",
+        "name": "Notify Heater",
+        "func": "flow.set('HeaterOn', msg.payload);\nvar lastState = context.get('HeaterOn') || 0;\nvar blankMsg = null;\nif (lastState != msg.payload)\n{\n    blankMsg = {'topic':'blankTemperature', 'payload':true};\n    flow.set('blankTemperature', true);\n}\ncontext.set('HeaterOn', msg.payload);\nreturn [msg,blankMsg];",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 770,
+        "y": 240,
+        "wires": [
+            [
+                "79fb9dbb.1d7b84",
+                "42dc8914.b54bc8"
+            ],
+            [
+                "126ad8c4.588a97"
+            ]
+        ]
+    },
+    {
+        "id": "126ad8c4.588a97",
+        "type": "delay",
+        "z": "f7dae6bd.3a0418",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 920,
+        "y": 280,
+        "wires": [
+            [
+                "2131fa65.778746"
+            ]
+        ]
+    },
+    {
+        "id": "2131fa65.778746",
+        "type": "function",
+        "z": "f7dae6bd.3a0418",
+        "name": "Unblank Temp",
+        "func": "flow.set('blankTemperature', false);\nreturn null;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 900,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a3d0b983.ff6268",
+        "type": "serial out",
+        "z": "f7dae6bd.3a0418",
+        "name": "Arduino",
+        "serial": "4a8b6312.c2f36c",
+        "x": 740,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "c4d2b2bc.1b148",
+        "type": "inject",
+        "z": "f7dae6bd.3a0418",
+        "name": "0.5 Hz",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "2",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "10",
+        "x": 100,
+        "y": 680,
+        "wires": [
+            [
+                "20a9520a.0b0afe"
+            ]
+        ]
+    },
+    {
+        "id": "20a9520a.0b0afe",
+        "type": "function",
+        "z": "f7dae6bd.3a0418",
+        "name": "Get Temperature",
+        "func": "if (flow.get('sendingSettings')) return null;\nvar temp = \n{\n    'topic':'temp',\n    'payload':'temp!'\n}\nreturn temp;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 290,
+        "y": 680,
+        "wires": [
+            [
+                "a3d0b983.ff6268"
+            ]
+        ]
+    },
+    {
+        "id": "c311d18d.7d9c6",
+        "type": "delay",
+        "z": "f7dae6bd.3a0418",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 560,
+        "y": 500,
+        "wires": [
+            [
+                "f4729b58.723bd8"
+            ]
+        ]
+    },
+    {
+        "id": "f4729b58.723bd8",
+        "type": "function",
+        "z": "f7dae6bd.3a0418",
+        "name": "Set sending flag false",
+        "func": "flow.set('sendingSettings', false);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 780,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "804c3696.fb7348",
+        "type": "mqtt in",
+        "z": "f7dae6bd.3a0418",
+        "name": "",
+        "topic": "bake01/regulateTemp",
+        "qos": "0",
+        "broker": "ad4f30cc.06d7a",
+        "x": 160,
+        "y": 160,
+        "wires": [
+            [
+                "db34d754.7b8878"
+            ]
+        ]
+    },
+    {
+        "id": "3efb1d68.be9742",
+        "type": "mqtt out",
+        "z": "f7dae6bd.3a0418",
+        "name": "bake01/temperature",
+        "topic": "",
+        "qos": "2",
+        "retain": "false",
+        "broker": "ad4f30cc.06d7a",
+        "x": 540,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "d4f10c3a.092d2",
+        "type": "mqtt in",
+        "z": "f7dae6bd.3a0418",
+        "name": "",
+        "topic": "bake01/regulateWindow",
+        "qos": "0",
+        "broker": "ad4f30cc.06d7a",
+        "x": 150,
+        "y": 220,
+        "wires": [
+            [
+                "db34d754.7b8878"
+            ]
+        ]
+    },
+    {
+        "id": "5c5a5c91.f580c4",
+        "type": "mqtt in",
+        "z": "f7dae6bd.3a0418",
+        "name": "",
+        "topic": "bake01/regulate",
+        "qos": "0",
+        "broker": "ad4f30cc.06d7a",
+        "x": 180,
+        "y": 280,
+        "wires": [
+            [
+                "db34d754.7b8878"
+            ]
+        ]
+    },
+    {
+        "id": "f1981a8b.9f3718",
+        "type": "mqtt out",
+        "z": "f7dae6bd.3a0418",
+        "name": "bake01/aboveWindow",
+        "topic": "",
+        "qos": "2",
+        "retain": "false",
+        "broker": "ad4f30cc.06d7a",
+        "x": 780,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "8412ba9b.712bb8",
+        "type": "mqtt out",
+        "z": "f7dae6bd.3a0418",
+        "name": "bake01/belowWindow",
+        "topic": "",
+        "qos": "2",
+        "retain": "false",
+        "broker": "ad4f30cc.06d7a",
+        "x": 780,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "fbbd1824.06cb58",
+        "type": "mqtt in",
+        "z": "f7dae6bd.3a0418",
+        "name": "",
+        "topic": "bake01/HeaterControl",
+        "qos": "0",
+        "broker": "ad4f30cc.06d7a",
+        "x": 560,
+        "y": 240,
+        "wires": [
+            [
+                "9b50574.dc18fa8"
+            ]
+        ]
+    },
+    {
+        "id": "94d46025.97f3d",
+        "type": "mqtt in",
+        "z": "f7dae6bd.3a0418",
+        "name": "",
+        "topic": "bake01/sendingSettings",
+        "qos": "0",
+        "broker": "ad4f30cc.06d7a",
+        "x": 150,
+        "y": 440,
+        "wires": [
+            [
+                "1f8959e8.1c7826"
+            ]
+        ]
+    },
+    {
+        "id": "1f8959e8.1c7826",
+        "type": "function",
+        "z": "f7dae6bd.3a0418",
+        "name": "Set sending flag true",
+        "func": "flow.set('sendingSettings', true);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 520,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8a407c84.d5945",
+        "type": "mqtt in",
+        "z": "f7dae6bd.3a0418",
+        "name": "",
+        "topic": "bake01/offset",
+        "qos": "0",
+        "broker": "ad4f30cc.06d7a",
+        "x": 170,
+        "y": 620,
+        "wires": [
+            [
+                "76399cc6.4db224"
+            ]
+        ]
+    },
+    {
+        "id": "60c5d54b.5c40ac",
+        "type": "mqtt in",
+        "z": "f7dae6bd.3a0418",
+        "name": "",
+        "topic": "bake01/calFactor",
+        "qos": "0",
+        "broker": "ad4f30cc.06d7a",
+        "x": 160,
+        "y": 560,
+        "wires": [
+            [
+                "ac8244ef.3352f8"
+            ]
+        ]
+    },
+    {
+        "id": "bcae3297.b98f",
+        "type": "mqtt in",
+        "z": "f7dae6bd.3a0418",
+        "name": "",
+        "topic": "bake01/bandwidth",
+        "qos": "0",
+        "broker": "ad4f30cc.06d7a",
+        "x": 150,
+        "y": 500,
+        "wires": [
+            [
+                "4405f34b.c937dc"
+            ]
+        ]
+    },
+    {
+        "id": "db34d754.7b8878",
+        "type": "json",
+        "z": "f7dae6bd.3a0418",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 350,
+        "y": 220,
+        "wires": [
+            [
+                "2457c57c.d5ffba"
+            ]
+        ]
+    },
+    {
+        "id": "42dc8914.b54bc8",
+        "type": "mqtt out",
+        "z": "f7dae6bd.3a0418",
+        "name": "",
+        "topic": "bake01/HeaterStatus",
+        "qos": "2",
+        "retain": "false",
+        "broker": "ad4f30cc.06d7a",
+        "x": 1000,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "76399cc6.4db224",
+        "type": "delay",
+        "z": "f7dae6bd.3a0418",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 400,
+        "y": 620,
+        "wires": [
+            [
+                "a3d0b983.ff6268"
+            ]
+        ]
+    },
+    {
+        "id": "ac8244ef.3352f8",
+        "type": "delay",
+        "z": "f7dae6bd.3a0418",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 400,
+        "y": 580,
+        "wires": [
+            [
+                "a3d0b983.ff6268"
+            ]
+        ]
+    },
+    {
+        "id": "4405f34b.c937dc",
+        "type": "delay",
+        "z": "f7dae6bd.3a0418",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 400,
+        "y": 540,
+        "wires": [
+            [
+                "a3d0b983.ff6268",
+                "c311d18d.7d9c6"
+            ]
+        ]
+    }
+]
