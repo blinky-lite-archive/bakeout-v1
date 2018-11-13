@@ -1,0 +1,629 @@
+[
+    {
+        "id": "f27d4b1d.b4fbd8",
+        "type": "tab",
+        "label": "PowerMeter",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "e9f7686a.74f588",
+        "type": "subflow",
+        "name": "Settings->Arduino",
+        "info": "",
+        "in": [
+            {
+                "x": 80,
+                "y": 120,
+                "wires": [
+                    {
+                        "id": "3b521254.b8ba1e"
+                    }
+                ]
+            }
+        ],
+        "out": []
+    },
+    {
+        "id": "ec2e503b.4736f",
+        "type": "serial-port",
+        "z": "",
+        "serialport": "/dev/ttyS0",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": true
+    },
+    {
+        "id": "96668e04.b73a3",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#000000",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            }
+        },
+        "site": {
+            "name": "Power Meter",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "52840f1d.7f7b",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Power Display",
+        "icon": "dashboard"
+    },
+    {
+        "id": "f0612c16.011e8",
+        "type": "ui_group",
+        "z": "",
+        "name": "Display",
+        "tab": "52840f1d.7f7b",
+        "disp": false,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "b2f28e0f.37ec",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "Shiftr",
+        "broker": "broker.shiftr.io",
+        "port": "1883",
+        "clientid": "power-meter-dma",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": ""
+    },
+    {
+        "id": "43b054ca.74a8cc",
+        "type": "serial in",
+        "z": "f27d4b1d.b4fbd8",
+        "name": "",
+        "serial": "ec2e503b.4736f",
+        "x": 280,
+        "y": 320,
+        "wires": [
+            [
+                "2b2078d4.4167c8"
+            ]
+        ]
+    },
+    {
+        "id": "2b2078d4.4167c8",
+        "type": "function",
+        "z": "f27d4b1d.b4fbd8",
+        "name": "Numberize",
+        "func": "msg.payload = Number(msg.payload);\nflow.set('power', msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 450,
+        "y": 320,
+        "wires": [
+            [
+                "15dffa71.3aec66",
+                "78af7685.326e78"
+            ]
+        ]
+    },
+    {
+        "id": "15dffa71.3aec66",
+        "type": "ui_chart",
+        "z": "f27d4b1d.b4fbd8",
+        "name": "",
+        "group": "f0612c16.011e8",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "x": 650,
+        "y": 400,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "78af7685.326e78",
+        "type": "ui_gauge",
+        "z": "f27d4b1d.b4fbd8",
+        "name": "",
+        "group": "f0612c16.011e8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "",
+        "label": "Watts",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "200",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 650,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "c38a950f.968178",
+        "type": "function",
+        "z": "f27d4b1d.b4fbd8",
+        "name": "BlankPlot",
+        "func": "msg.payload = [];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 460,
+        "y": 400,
+        "wires": [
+            [
+                "15dffa71.3aec66"
+            ]
+        ]
+    },
+    {
+        "id": "90f9b0d3.77dae",
+        "type": "ui_template",
+        "z": "f27d4b1d.b4fbd8",
+        "group": "f0612c16.011e8",
+        "name": "Restart Plot",
+        "order": 9,
+        "width": "0",
+        "height": "0",
+        "format": "<md-button \n    ng-style=\"{color:'black', background:'lime'}\"\n    ng-disabled='false'\n    ng-click=\"send({payload:true})\">Restart Plot</md-button>\n",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "templateScope": "local",
+        "x": 290,
+        "y": 400,
+        "wires": [
+            [
+                "c38a950f.968178"
+            ]
+        ]
+    },
+    {
+        "id": "a3aea6d9.316df8",
+        "type": "mqtt out",
+        "z": "f27d4b1d.b4fbd8",
+        "name": "",
+        "topic": "power/zeroIoc01/readings/echo",
+        "qos": "0",
+        "retain": "true",
+        "broker": "b2f28e0f.37ec",
+        "x": 730,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "90b668f2.58f108",
+        "type": "inject",
+        "z": "f27d4b1d.b4fbd8",
+        "name": "1 Hz",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "x": 270,
+        "y": 520,
+        "wires": [
+            [
+                "a02bb25b.290a7"
+            ]
+        ]
+    },
+    {
+        "id": "a02bb25b.290a7",
+        "type": "function",
+        "z": "f27d4b1d.b4fbd8",
+        "name": "Prepare Readings",
+        "func": "msg.topic = 'readings/echo';\nmsg.payload = {'power':flow.get('power')};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 450,
+        "y": 520,
+        "wires": [
+            [
+                "a3aea6d9.316df8"
+            ]
+        ]
+    },
+    {
+        "id": "ad13f5e9.0d50a8",
+        "type": "inject",
+        "z": "f27d4b1d.b4fbd8",
+        "name": "Init",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "x": 250,
+        "y": 680,
+        "wires": [
+            [
+                "5c0712f4.b1659c"
+            ]
+        ]
+    },
+    {
+        "id": "5c0712f4.b1659c",
+        "type": "function",
+        "z": "f27d4b1d.b4fbd8",
+        "name": "Init Settings",
+        "func": "var powerMeterSettings = \n{\n    'topic':'powerMeterSettings',\n    'payload':\n    {\n        'bandwidth':2,\n        'powerCal':1,\n        'powerOffset':8\n    }\n};\nglobal.set('powerMeterSettings', powerMeterSettings);\nreturn powerMeterSettings;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 410,
+        "y": 680,
+        "wires": [
+            [
+                "175ebe95.0b3041"
+            ]
+        ]
+    },
+    {
+        "id": "3b521254.b8ba1e",
+        "type": "function",
+        "z": "e9f7686a.74f588",
+        "name": "Send Settings to Arduino",
+        "func": "var powerMeterSettings = global.get('powerMeterSettings');\nvar bandwidth = \n{\n    'topic':'bandwidth',\n    'payload':'bandwidth ' + powerMeterSettings.payload.bandwidth.toString() + '!'\n}\nvar powerCal = \n{\n    'topic':'powerCal',\n    'payload':'powerCal ' + powerMeterSettings.payload.powerCal.toString() + '!'\n}\nvar powerOffset = \n{\n    'topic':'powerOffset',\n    'payload':'powerOffset ' + powerMeterSettings.payload.powerOffset.toString() + '!'\n}\n\nreturn [bandwidth,powerCal,powerOffset];",
+        "outputs": 3,
+        "noerr": 0,
+        "x": 270,
+        "y": 120,
+        "wires": [
+            [
+                "835ffc0f.b816e"
+            ],
+            [
+                "a61d18ea.447348"
+            ],
+            [
+                "fba2feae.9cd8"
+            ]
+        ]
+    },
+    {
+        "id": "175ebe95.0b3041",
+        "type": "delay",
+        "z": "f27d4b1d.b4fbd8",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "4",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 560,
+        "y": 680,
+        "wires": [
+            [
+                "b25bf83a.16b6a8",
+                "211aa2bd.fb4dae"
+            ]
+        ]
+    },
+    {
+        "id": "fba2feae.9cd8",
+        "type": "delay",
+        "z": "e9f7686a.74f588",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 540,
+        "y": 160,
+        "wires": [
+            [
+                "9d7ecb39.e40a18"
+            ]
+        ]
+    },
+    {
+        "id": "a61d18ea.447348",
+        "type": "delay",
+        "z": "e9f7686a.74f588",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 540,
+        "y": 120,
+        "wires": [
+            [
+                "9d7ecb39.e40a18"
+            ]
+        ]
+    },
+    {
+        "id": "835ffc0f.b816e",
+        "type": "delay",
+        "z": "e9f7686a.74f588",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 540,
+        "y": 80,
+        "wires": [
+            [
+                "9d7ecb39.e40a18"
+            ]
+        ]
+    },
+    {
+        "id": "9d7ecb39.e40a18",
+        "type": "serial out",
+        "z": "e9f7686a.74f588",
+        "name": "",
+        "serial": "ec2e503b.4736f",
+        "x": 720,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "b25bf83a.16b6a8",
+        "type": "subflow:e9f7686a.74f588",
+        "z": "f27d4b1d.b4fbd8",
+        "x": 810,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "3b5fa96c.6b1cb6",
+        "type": "mqtt in",
+        "z": "f27d4b1d.b4fbd8",
+        "name": "",
+        "topic": "power/zeroIoc01/settings/get",
+        "qos": "0",
+        "broker": "b2f28e0f.37ec",
+        "x": 310,
+        "y": 800,
+        "wires": [
+            [
+                "211aa2bd.fb4dae"
+            ]
+        ]
+    },
+    {
+        "id": "211aa2bd.fb4dae",
+        "type": "function",
+        "z": "f27d4b1d.b4fbd8",
+        "name": "echo settings",
+        "func": "var powerMeterSettings = global.get('powerMeterSettings');\nreturn powerMeterSettings;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 550,
+        "y": 800,
+        "wires": [
+            [
+                "8d3f334a.a3934"
+            ]
+        ]
+    },
+    {
+        "id": "8d3f334a.a3934",
+        "type": "mqtt out",
+        "z": "f27d4b1d.b4fbd8",
+        "name": "",
+        "topic": "power/zeroIoc01/settings/echo",
+        "qos": "0",
+        "retain": "true",
+        "broker": "b2f28e0f.37ec",
+        "x": 810,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "7eb5b4b4.3914dc",
+        "type": "mqtt in",
+        "z": "f27d4b1d.b4fbd8",
+        "name": "",
+        "topic": "power/zeroIoc01/settings/set",
+        "qos": "0",
+        "broker": "b2f28e0f.37ec",
+        "x": 300,
+        "y": 900,
+        "wires": [
+            [
+                "342b9613.651fca"
+            ]
+        ]
+    },
+    {
+        "id": "342b9613.651fca",
+        "type": "json",
+        "z": "f27d4b1d.b4fbd8",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 490,
+        "y": 900,
+        "wires": [
+            [
+                "3e58c29.e05a53e"
+            ]
+        ]
+    },
+    {
+        "id": "e8005a4c.5fbdd8",
+        "type": "debug",
+        "z": "f27d4b1d.b4fbd8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 950,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "3e58c29.e05a53e",
+        "type": "function",
+        "z": "f27d4b1d.b4fbd8",
+        "name": "Set PowerMeter settings",
+        "func": "msg.topic = 'powerMeterSettings';\nglobal.set('powerMeterSettings', msg);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 690,
+        "y": 900,
+        "wires": [
+            [
+                "e8005a4c.5fbdd8",
+                "b25bf83a.16b6a8",
+                "211aa2bd.fb4dae"
+            ]
+        ]
+    }
+]
