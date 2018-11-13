@@ -1,21 +1,20 @@
 int loopDelaymS = 1;
 const int analogInPin = A1;  
-float bitsPerAmp = 8.532;
-float amps = 0;
-float watts = 0;
-float powerCal = 1.0;
+const int greenLED = 10;  
+float calFactor = 1.0;
 
 float sensorValue = 0;
-float avgValue = 533.0;
+float avgValue = 0.0;
 float nsamples = 500.0;
-float varianceValue = 0.0;
-float varianceAvgValue = 0.0;
-float rmsAvgValue = 0;
-float powerOffset = 4.0;
+float offset = 0.0;
 float bandwidth = 2.0;
+float outputValue = 0.0;
 int icount = 0;
 int icountMax = 1000;
-boolean writePi = true;
+int icountLED = 0;
+int icountLEDMax = 500;
+
+boolean writePi = true ;
 const int buffLength = 32;  
 char inputBuff[buffLength];
 int buffPointer = 0;
@@ -23,10 +22,10 @@ int buffPointer = 0;
 
 void setup() 
 {
-  Serial.begin(9600);
   if (writePi) {Serial1.begin(9600);} else {Serial.begin(9600);}
   nsamples = ((float) icountMax) / bandwidth;
   pinMode(LED_BUILTIN, OUTPUT);
+  pinMode(greenLED                                                                                                                                                                                                                                                                                                                                                                                                                                                                  , OUTPUT);
   delay(200);
   buffPointer = 0;
   for (int ii = 0; ii < buffLength; ++ii) inputBuff[ii] = '\0';
@@ -36,28 +35,34 @@ void loop()
 {
   String serialRead = readSerial();
 //  if (serialRead != "") Serial.println(serialRead);
-  if (serialRead.lastIndexOf("powerOffset")  > -1) powerOffset = newFloatSetting("powerOffset", serialRead);
-  if (serialRead.lastIndexOf("powerCal")  > -1)    powerCal    = newFloatSetting("powerCal", serialRead);
+  if (serialRead.lastIndexOf("offset")  > -1) offset = newFloatSetting("offset", serialRead);
+  if (serialRead.lastIndexOf("calFactor")  > -1)    calFactor    = newFloatSetting("calFactor", serialRead);
   if (serialRead.lastIndexOf("bandwidth")  > -1)   
   {
     bandwidth    = newFloatSetting("bandwidth", serialRead);
     nsamples = ((float) icountMax) / bandwidth;
   }
-
+  if (serialRead.lastIndexOf("temp")  > -1)   
+  {
+    if (!writePi) Serial.println(outputValue);
+    if (writePi) Serial1.println(outputValue);
+    digitalWrite(greenLED, HIGH);
+    icountLED = 0;
+  }
+  if (icountLED < icountLEDMax) ++icountLED;
+  if (icountLED == icountLEDMax) digitalWrite(greenLED, LOW);
+ 
   sensorValue = (float) analogRead(analogInPin);
   avgValue = avgValue + (sensorValue - avgValue) / nsamples;
-  varianceValue = (sensorValue - avgValue) * (sensorValue - avgValue);
-  varianceAvgValue = varianceAvgValue + (varianceValue - varianceAvgValue) / nsamples;
-  rmsAvgValue = sqrt(varianceAvgValue);
-  amps = powerCal * rmsAvgValue / bitsPerAmp;
-  watts = (amps * 233.0) - powerOffset;
+  outputValue = calFactor * (avgValue - offset);
 
   ++icount;
-  if (icount == (icountMax / 2)) digitalWrite(LED_BUILTIN, HIGH);
+  if (icount == (icountMax / 2)) 
+  {
+    digitalWrite(LED_BUILTIN, HIGH);
+  }
   if (icount == icountMax)
   {
-    if (!writePi) Serial.println(watts);
-    if (writePi) Serial1.println(watts);
     digitalWrite(LED_BUILTIN, LOW);
     icount = 0;
   }
